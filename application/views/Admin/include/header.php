@@ -94,6 +94,11 @@
               </a>
             </li>
             <li class="treeview">
+              <a href="<?php echo base_url();?>admin/c_topik">
+                <i class="fa fa-dashboard"></i> <span>Topik</span>
+              </a>
+            </li>
+            <li class="treeview">
               <a href="#">
                 <i class="fa fa-folder"></i> <span>Data</span>
                 <i class="fa fa-angle-left pull-right"></i>
