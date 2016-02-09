@@ -94,7 +94,7 @@
 			    sel4.empty();
 
     $.ajax({
-            url:"<?=base_url()?>admin/c_quiz/search_ajax/"+idkategori, 
+            url:"<?=base_url()?>admin/c_quiz/search_ajax/"+idkategori,
             type:'post',
             dataType: 'json',
             success: function(data) {

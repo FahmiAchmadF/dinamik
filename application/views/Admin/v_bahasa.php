@@ -49,6 +49,6 @@
         </table>
     </div>
     <div class="panel-footer">
-    </div>  
+    </div>
     
 <?php include('include/footer.php');?>

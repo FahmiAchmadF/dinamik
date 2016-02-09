@@ -134,10 +134,10 @@
       <form class="ten" action="<?php echo base_url();?>user/login/do_login" method="POST">
          <a class="close" href="#">&times;</a>
         <li class="cream">
-          <input type="text" class="text" onKeyPress="return hurufangka(this, event)" maxlength="30"  name="username" placeholder="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" ><a href="#" class=" icon10 user10"></a>
+          <input type="text" class="text" onKeyPress="return hurufangka(this, event)" maxlength="30"  name="username" placeholder="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" ><span class=" icon10 user10"></span>
         </li>
         <li class="cream">
-          <input type="password" name="password" onKeyPress="return hurufangka(this, event)" maxlength="30" placeholder="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"><a href="#" class=" icon10 lock10"></a>
+          <input type="password" name="password" onKeyPress="return hurufangka(this, event)" maxlength="30" placeholder="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"><span class=" icon10 lock10"></a>
         </li>
         <div class="submit-ten">
           <input type="submit" onclick="myFunction()" value="<?php echo $this->login;?>" > 
@@ -156,10 +156,10 @@
          
          <a class="close" href="#">&times;</a>
         <li class="cream">
-          <input type="text" name="username" onKeyPress="return hurufangka(this, event)" maxlength="30" class="text" placeholder="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" ><a href="#" class=" icon10 user10"></a>
+          <input type="text" name="username" onKeyPress="return hurufangka(this, event)" maxlength="30" class="text" placeholder="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" ><span class=" icon10 user10"> </span>
         </li>
         <li class="cream">
-          <input type="text" name="email" onKeyPress="return hurufangka(this, event)" maxlength="30" class="text" placeholder="E-Mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" ><a href="#" class=" icon10 user10"></a>
+          <input type="text" name="email" onKeyPress="return hurufangka(this, event)" maxlength="30" class="text" placeholder="E-Mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" ><span class=" icon10 user10"></span>
         </li>
 <!--         <li class="cream">
           <input type="text" name="nama" class="text" placeholder="Nama" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nama';}" ><a href="#" class=" icon10 user10"></a>

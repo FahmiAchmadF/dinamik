@@ -17,7 +17,7 @@
                 <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12">Provinsi</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <select class="select2_single form-control" id="provinsi" required name='id_provinsi' onchange="prov(this.value)">
+                            <select class="select2_single form-control" required name='id_provinsi' >
                             <?php
                             foreach ($provinsi as $provinsi) 
                             {
@@ -31,7 +31,7 @@
                 <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12">Kategori</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <select class="select2_single form-control" required name='id_kategori_forum'>
+                            <select class="select2_single form-control" required name='id_kategori_forum' >
                             <?php
                             foreach ($kategori as $data) 
                             {
@@ -96,9 +96,10 @@
 
         <div class="panel-footer"></div>
     </div>
-    <?php }?>
-
-    <div id="tampungan" class="panel panel-default"></div>            
+    <?php }?>            
+                
+                
+                
 
 
                 <div class="form-group">
@@ -110,41 +111,14 @@
 <script src="<?php echo base_url();?>asset/ckeditor/jquery/jQuery-2.1.4.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>asset/ckeditor/ckeditor.js"></script>                                  
 <script type="text/javascript">
-    function prov(obj){
-    
-
-    var idprov = obj;
-    
-    var sel0 = $("#tampungan");
-                sel0.empty();
-    
-    $.ajax({
-            url:"<?=base_url()?>admin/c_artikel/ambillangprov/"+idprov, 
-            type:'post',
-
-            success: function(data) {
-                
-                var sel0 = $("#tampungan");
-                sel0.empty();
-
-                $('#tampungan').append(data);
-                <?php $jml=$jumlah_lang+1?>
-                CKEDITOR.replace('editor<?php echo $jml ?>');
-                
-            }
-
-    });
-  }
   
   $(function () {
-        prov(1);
         <?php for ($ab=1; $ab <= $jumlah_lang ; $ab++) { ?>
             CKEDITOR.replace('editor<?php echo $ab;?>');
         <?php }?>
-
-
         
       });
+
 
   </script>
 

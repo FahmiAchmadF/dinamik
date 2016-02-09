@@ -1,0 +1,410 @@
+
+<html> <head>   <meta charset="UTF-8">   <link rel="stylesheet"
+href="style/style.css">   
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+</script>   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jq
+uery.min.js"></script>   <meta name="viewport" content="width=device-width
+,initial-scale=1">   <link rel="stylesheet" href="style/libs/animate.css">
+
+    <script src="js/typed.js" type="text/javascript"></script>
+    <link rel="icon" type="icon" href="img/logo.png" type="image/png">
+	<title>Ayo Berbudaya</title>
+	<script>
+    $(function(){
+    	//Hanya Bisa di Style jika didepannya <p>
+        $("#typed").typed({
+            // strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
+            stringsElement: $('#typed-strings'),
+            typeSpeed: 30,
+            backDelay: 1000,
+            loop: false,
+            contentType: 'html', // or text
+            // defaults to false for infinite loop
+            loopCount: false,
+            callback: function(){ foo(); },
+            resetCallback: function() { newTyped(); }
+        });
+
+        $(".reset").click(function(){
+            $("#typed").typed('reset');
+        });
+
+    });
+
+    function newTyped(){ /* A new typed object */ }
+
+    function foo(){ console.log("Callback"); }
+
+    </script>
+    <style>
+        /* code for animated blinking cursor */
+        .typed-cursor{
+            opacity: 1;
+            font-weight: 100;
+            -webkit-animation: blink 0.7s infinite;
+            -moz-animation: blink 0.7s infinite;
+            -ms-animation: blink 0.7s infinite;
+            -o-animation: blink 0.7s infinite;
+            animation: blink 0.7s infinite;
+        }
+        @-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-webkit-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-moz-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-ms-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-o-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+    </style>
+<script>
+  /* Demo purposes only */
+  $(".hover").mouseleave(
+    function () {
+      $(this).removeClass("hover");
+    }
+  );
+</script>
+</head>
+<body>
+<div class="fixed" style="z-index:99999;">
+	<input type="checkbox" id="menuToggle">
+	<label for="menuToggle" class="menu-icon"><div style="margin-top:-10px;"><h4>&#9776;</h4></div></label>
+	<header>
+		<div id="brnad">Ayo Berbudaya</div><span class="responsive">Abud</span>
+    <div id="menu">Nama Pengguna <i class="fa fa-profile"><div class="circle-1">
+  
+  <img src="img/jaipongan.jpg" alt="Foto Profile" />
+  
+</div><span class="menu-arrow" style="margin-left:10px">&#9660;</span></i></div>
+<div id="ddmenu">
+<ul>
+<li>Edit Akun <i class="fa fa-gear fa-profile"></i></li>
+<li>Keluar <i class="fa fa-sign-out fa-profile"></i></li>
+</ul> 
+</div> 
+    <script>
+     $("#menu").click (function(){          if($("#ddmenu").hasClass("animationclas"))
+          {            $("#ddmenu").removeClass("animationclas").addClass("removeanimation");
+          }
+          else
+          {          $("#ddmenu").removeClass("removeanimation").addClass("animationclas");
+          }
+         });
+    </script>
+	</header>
+	<nav class="menu" id="primary_nav_wrap">
+    <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Categories <span class="menu-arrow"><img src="img/keyboard53.png"></span></a>
+               <ul>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               </ul>
+          </li>
+          <li><a href="#">Forum <span class="menu-arrow"><img src="img/keyboard53.png"></span></a>
+               <ul>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               </ul>
+          </li>
+          <li><a href="#">Test</a></li>
+     </ul>
+	</nav>
+</div>
+<div id="carousel">
+    <div class="show" style="background-image:url(img/tugu.jpg)"></div>
+    <div style="background-image:url(img/prambanan.jpg)"></div>
+    <div style="background-image:url(img/borobudur.jpg)"></div>
+    <div style="background-image:url(img/parang-tritis.jpg)"></div>
+    <div style="background-image:url(img/budaya-yogya.jpg)"></div>
+    <div style="background-image:url(img/rumah-adat-yogya.jpg)"></div>
+    <div style="background-image:url(img/kraton-penjaga-yogya.jpg)"></div>
+    <i id="left" class="glyphicon glyphicon-chevron-left" style="z-index:2; position:absolute;"></i>
+    <i id="right" class="glyphicon glyphicon-chevron-right" style="z-index:2; position:absolute;"></i>
+
+    <ul>
+        <li class="showli"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+<br>
+<br>
+<br>
+<center>
+<div class="yogya-container-index">
+  <div class='col4'>
+    <div class='image-introduction wow bounceLeft'>
+      <img alt='' height='213' src='img/jogja-istimewa-8.jpg' width='320' class="wow bounceInLeft">
+    </div>
+    <div class='copy'>
+      <h3 class="title-introduction wow fadeInDown">SELAMAT DATANG</h3>
+      <hr class="yogya-line wow fadeInDown">
+      <p class="wow fadeInDown">Dinas Pariwisata DIY memiliki visi dan misi mewujudkan Yogyakarta sebagai daerah pariwisata berbasis budaya yang bertumpu pada kekuatan dan keunggulan budaya lokal dan dapat menjadi lokomotif pembangunan Daerah Istimewa Yogyakarta secara menyeluruh. </p>
+
+    </div>
+    <div class='clear'></div>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<h3 class="title-introduction wow fadeInDown"><span style="display:inline-block;
+    border-bottom:1px solid black;
+    padding-bottom:4px;">Kuis Dan Artikel Khusus Provinsi DIY</span></h3>
+<div class="snipresponsive wow fadeInDown">
+<figure class="snip1158 red wow bounceInLeft">
+  <img src="img/Tari-Golek-Menak.jpg" alt="sample21"/>
+  <figcaption>
+    <h2>Tari Golek Menak</h2>
+    <span>Tarian</span>
+  </figcaption>
+  <a href="#"></a>
+</figure>
+<figure class="snip1158 yellow wow fadeInDown">
+  <img src="img/Tari-Golek-Menak.jpg" alt="sample68"/>
+  <figcaption>
+    <h2>Tari Golek Menak</h2>
+    <span>Tarian</span>
+  </figcaption>
+  <a href="#"></a>
+</figure>
+<figure class="snip1158 blue wow bounceInRight" style="margin-bottom:70px;">
+  <img src="img/Tari-Golek-Menak.jpg" alt="sample17"/>
+  <figcaption>
+    <h2>Tari Golek Menak</h2>
+    <span>Tarian</span>
+  </figcaption>
+  <a href="#"></a>
+</figure>
+<figure class="snip1158 red wow bounceInLeft">
+  <img src="img/Tari-Golek-Menak.jpg" alt="sample21"/>
+  <figcaption>
+    <h2>Tari Golek Menak</h2>
+    <span>Tarian</span>
+  </figcaption>
+  <a href="#"></a>
+</figure>
+<figure class="snip1158 yellow wow fadeInDown">
+  <img src="img/Tari-Golek-Menak.jpg" alt="sample68"/>
+  <figcaption>
+    <h2>Tari Golek Menak</h2>
+    <span>Tarian</span>
+  </figcaption>
+  <a href="#"></a>
+</figure>
+<figure class="snip1158 blue wow bounceInRight" style="margin-bottom:70px;">
+  <img src="img/Tari-Golek-Menak.jpg" alt="sample17"/>
+  <figcaption>
+    <h2> Tari Golek Menak</h2>
+    <span>Tarian</span>
+  </figcaption>
+  <a href="#"></a>
+</figure>
+</center>
+</div>
+</div>
+
+<footer class="site-footer" style="margin-bottom:-50px;">
+  &copy; Copyright Logic (2015/2016)
+</footer>
+<div>
+  <!---Form Login-->
+   <div style="clear: both;visible:hidden;"></div>​
+  <div id="popup1" class="overlay">
+    <div class="tenth-login">
+    <a href="#" class="close-button">&#10006;</a>   
+      <h4 class="login">MASUK</h4>
+      <form class="ten">
+         <div class="fb"><a href="#"><span> </span> <lable>Masuk Dengan Facebook</lable><div class="clear"></div></a></div>
+         <a class="close" href="#">&times;</a>
+            <p>Atau<p>
+        <li class="cream">
+          <input type="text" class="text" placeholder="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" ><a href="#" class=" icon10 user10"></a>
+        </li>
+        <li class="cream">
+          <input type="password" class="password"placeholder="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"><a href="#" class=" icon10 lock10"></a>
+        </li>
+        <div class="submit-ten">
+          <input type="submit" onclick="myFunction()" value="Masuk" > 
+        </div>
+      </form>
+      <p class="or"><a href="#popup12" class="effect-underline">Daftar Akun</a><p>
+</div>
+</div>
+<!---Form Register-->
+   <div style="clear: both;"></div>​
+  <div id="popup12" class="overlay">
+    <div class="tenth-login" style="margin-top:110px">
+    <a href="#" class="close-button">&#10006;</a>   
+      <h4 class="login">DAFTAR</h4>
+      <form class="ten">
+         <div class="fb"><a href="#"><span> </span> <lable>Masuk Dengan Facebook</lable><div class="clear"></div></a></div>
+         <a class="close" href="#">&times;</a>
+        <li class="cream">
+          <input type="text" class="text" placeholder="E-Mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" ><a href="#" class=" icon10 user10"></a>
+        </li>
+        <li class="cream">
+          <input type="text" class="text" placeholder="Nama" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" ><a href="#" class=" icon10 user10"></a>
+        </li>
+        <li class="cream">
+          <input type="password" class="password" placeholder="Password"><a href="#" class=" icon10 lock10"></a>
+        </li>
+        <li class="cream">
+          <input type="password" class="password" placeholder="Ulangi-Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"><a href="#" class=" icon10 lock10"></a>
+        </li>
+        <div class="submit-ten">
+          <input type="submit" onclick="myFunction()" value="Daftar" > 
+        </div>
+      </form>
+      <p class="or"><a href="#popup1" class="effect-underline">Masuk</a><p>
+</div>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+            $(function () {
+            slider();
+        });
+
+
+
+        function slider() {
+            var size = $("#carousel > div").length; //number of items in carousel
+            var position = 0; // current position of carousal
+            var sliderIntervalID; // used to clear autoplay
+            var sliderInterval = 3500; // interval of autoplay
+            var changeInterval = 1000; // interval between change of slides
+
+            $("#carousel > div").not(".show").fadeOut(); //fadeout all items except the one with .show
+
+            startSlider(); //starts autoplay
+
+            // function to start auto play
+            function startSlider() {
+                sliderIntervalID = setInterval(function () {
+                    run(1);
+                }, sliderInterval);
+            }
+
+            // on mouseover stop the autoplay
+            $("#carousel").mouseover(function () {
+                clearInterval(sliderIntervalID);
+            });
+            // on mouseout starts the autoplay
+            $("#carousel").mouseout(function () {
+                startSlider();
+            });
+
+            //on right clicking the carousal
+            $("#carousel > #right").click(function () {
+                run(1);
+            });
+
+
+            //on left button click of the carousal
+            $("#carousel > #left").click(function () {
+                run(0);
+            });
+
+
+            //moves the slider back or forth based on x (1 = forward 0 = backward)
+            function run(x) {
+                position = $("#carousel").find(".show").index();
+                if (x == 1)
+                    ++position;
+                else
+                    --position;
+                checker();
+                changeCarousal(); //function call that actually changes slides
+            }
+
+
+            //just a function to reposition the slider when out of bounds
+            function checker() {
+                if (position >= size) {
+                    position = 0;
+                }
+                else if (position < 0) {
+                    position = size - 1;
+                }
+                //console.log(position);
+            };
+
+
+            //this changes the image and button selection
+            function changeCarousal() {
+                $("#carousel").find(".show").removeClass("show").fadeOut();
+                $("#carousel > div").eq(position).fadeIn(changeInterval).addClass("show");
+                $("#carousel > ul").find(".showli").removeClass("showli");
+                $("#carousel > ul > li").eq(position).addClass("showli");
+            }
+
+            //when use clicks slider button
+            $("#carousel > ul > li").click(function () {
+                position = $(this).index();
+                var temp = $("#carousel").find(".show").index();
+                if (position != temp) {
+                    changeCarousal();
+                }
+            });
+        }
+
+$(window).scroll(function () {
+            var h = ($(this).scrollTop());
+            $('#carousel > div').css({
+                'transform': 'scale(' + (1 + h / 2000) + ') translateY(' + h / 8 + '%) rotateZ(-' + (h / 90) + 'deg)'
+            });
+
+            $('#carousel > i').css({
+                'transform': 'translateY(' + h/2 + '%)'
+            });
+        });
+
+    </script>
+  <script src="dist/wow.js"></script>
+  <script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+    wow.init();
+    document.getElementById('moar').onclick = function() {
+      var section = document.createElement('section');
+      section.className = 'section--purple wow fadeInDown';
+      this.parentNode.insertBefore(section, this);
+    };
+  </script>
+</body>
+</html>

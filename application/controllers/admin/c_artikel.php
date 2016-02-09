@@ -42,7 +42,8 @@ class C_artikel extends CI_Controller
 
 	function index()
 	{
-        
+        // $fahmi['abjad']=array('1','A','B','C');
+        // var_dump($fahmi['abjad']['2']);
         $artikel = $this->m_artikel->data_artikel($this->seson['id_admin']);
         $data = array(
         'user'      =>$this->seson,
@@ -62,10 +63,9 @@ class C_artikel extends CI_Controller
         'user'      =>$this->seson,
         'kategori'  =>$tampil_kategori,
         'provinsi'  =>  $this->m_artikel->tampil_provinsi(),
-        'lang' => $this->m_artikel->language("Indonesia", "English"),
-        'jumlah_lang' => $this->m_artikel->jumlahbahasa("Indonesia", "English")
+        'lang' => $this->m_quiz->language(),
+        'jumlah_lang' => $this->m_quiz->jumlahbahasa()
         );
-        
 
         $this->load->view('admin/v_artikel_add', $data);
     }
@@ -85,11 +85,11 @@ class C_artikel extends CI_Controller
             'id' => $id_artikel,
             'kategori'  => $this->m_artikel->tampil_kategori(),
             'provinsi'  =>  $this->m_artikel->tampil_provinsi(),
-            'jumlah_lang' => $this->m_artikel->jumlahbahasaartikel($id_artikel),
+            'lang' => $this->m_quiz->language(),
+            'jumlah_lang' => $this->m_quiz->jumlahbahasa(),
             'artikel' => $this->m_artikel->lihat_artikel($id_artikel),
             'artikel_lang' => $this->m_artikel->lihat_artikel_language($id_artikel)
             );
-        
 
         $this->load->view('admin/v_artikel_ubah',$data);
     }
@@ -108,50 +108,7 @@ class C_artikel extends CI_Controller
         $this->m_artikel->hapus_artikel($id_artikel);
 
         redirect('admin/c_artikel');
-    }
-
-    function ambillangprov() {
-        $id_provinsi = $this->uri->segment(4);
-
-            $langprov = $this->m_artikel->langprov($id_provinsi);
-            $jumlah_langprov = $this->m_artikel->jumlah_langprov($id_provinsi);
-
-        for ($bz=1; $bz <= $jumlah_langprov ; $bz++) { ?>
-            
-                <div class="panel-heading" id="prov">
-                        <strong>
-                        <?php 
-                        $bahasanya = $bz-1;
-                            echo $langprov[$bahasanya]->language; 
-                            $bz = $bz + $jumlah_langprov + 1;
-                        ?>
-                        </strong>
-                </div>
-                <div class="panel-body">
-                    <div class="form-group">
-                            <label for="judul<?php echo $bz; ?>">Judul <span class="required"></span>
-                            </label>
-                                
-                                 <input type="text" id="last-name" name='judul<?php echo $bz ;?>' maxlength='225' required="required" class="form-control col-md-7 col-xs-12">
-                                
-                    </div>
-                    
-                    <div class="form-group">
-                            <label>Isi <span class="required"></span>
-                            </label>
-                                <textarea id="editor<?php echo $bz; ?>" name="isi<?php echo $bz ;?>">
-                                </textarea>
-                    </div>
-                
-                </div>
-
-
-
-                <div class="panel-footer"></div>
-            
-        <?php }?>  
-   <?php } 
-
+    } 
 
 }
 ?>

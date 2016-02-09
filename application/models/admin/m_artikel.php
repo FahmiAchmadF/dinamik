@@ -11,68 +11,6 @@ class M_artikel extends CI_Model{
         $this->gallery_path_url = base_url(). 'images/';
     }
 
-    function language($ind, $eng) {
-            $q = $this->db->select('*')
-                            ->from('tb_language')
-                            ->where('language', $ind)
-                            ->get();
-            $q = $q->result()[0];
-
-            $w = $this->db->select('*')
-                            ->from('tb_language')
-                            ->where('language', $eng)
-                            ->get();
-            $w = $w->result()[0];            
-
-            return array('0' => $q, '1' => $w);
-    }
-
-    function jumlahbahasa($ind, $eng) {
-            $q = $this->db->select('*')
-                            ->from('tb_language')
-                            ->where('language', $ind)
-                            ->get();
-            $q = $q->result()[0];
-
-            $w = $this->db->select('*')
-                            ->from('tb_language')
-                            ->where('language', $eng)
-                            ->get();
-            $w = $w->result()[0];            
-
-            return count(array('0' => $q, '1' => $w));
-    }
-
-    function langprov($id_provinsi) {
-            $q = $this->db->select('*')
-                            ->from('tb_provinsi')
-                            ->join('tb_language', 'tb_provinsi.id_language = tb_language.id')
-                            ->where('tb_provinsi.id', $id_provinsi)
-                            ->get();
-            $q = $q->result();
-
-            return $q;
-    }
-
-    function jumlah_langprov($id_provinsi) {
-            $q = $this->db->select('*')
-                            ->from('tb_provinsi')
-                            ->where('id', $id_provinsi)
-                            ->get();
-            $q = $q->result();
-
-            return count($q);
-    }
-
-    function jumlahbahasaartikel($id) {
-        $q = $this->db->select('*')
-                      ->from('tb_artikel_language')
-                      ->where('id_artikel', $id)
-                      ->get()
-                      ->result();
-        return count($q);
-    }
-
     function data_artikel($id_admin)
     {
         $this->db->select('*');
@@ -130,7 +68,6 @@ class M_artikel extends CI_Model{
     function lihat_artikel_language($id_artikel){
         $this->db->select('*');
         $this->db->from('tb_artikel_language');
-        $this->db->join('tb_language','tb_artikel_language.id_language = tb_language.id');
         $this->db->where('id_artikel',$id_artikel);
         $query = $this->db->get();
         $result = $query->result();
@@ -143,9 +80,7 @@ class M_artikel extends CI_Model{
         $id_provinsi = $this->input->post('id_provinsi');
         $id_kategori = $this->input->post('id_kategori_forum');
         $tanggal = $this->input->post('tanggal');
-        $jumlah_lang = $this->m_artikel->jumlahbahasa("Indonesia", "English");
-        $lang = $this->m_artikel->language("Indonesia", "English");
-
+        $jumlah_lang = $this->m_quiz->jumlahbahasa();
         $config = array(
         'allowed_types' => 'jpg|jpeg|gif|png',
         'upload_path' =>$this->gallery_path,
@@ -180,7 +115,7 @@ class M_artikel extends CI_Model{
             $exe1 = $this->db->insert('tb_artikel', $data1);
         }
 
-        for ($a=1; $a <= $jumlah_lang+1; $a++) {
+        for ($a=1; $a <= $jumlah_lang; $a++) {
             ${"judul$a"} = $this->input->post('judul'.$a.'');
             ${"isi$a"} = $this->input->post('isi'.$a.'');
         }
@@ -190,22 +125,10 @@ class M_artikel extends CI_Model{
             $q = $q->result(); 
             $last_id = $q['0']->id;
 
-                
-        $this->db->query("INSERT INTO tb_artikel_language(id_artikel,judul,isi,id_language) VALUES 
-        ('".$last_id."','".$judul1."','".$isi1."','".$lang[0]->id."')");
-                
-                
-                    $exe3 = $this->db->query("INSERT INTO tb_artikel_language(id_artikel,judul,isi,id_language) VALUES 
-                    ('".$last_id."','".$judul2."','".$isi2."','".$lang[1]->id."')");
-                
-
-        $langprov = $this->m_artikel->langprov($id_provinsi);
-
-        
-                    $exe4 = $this->db->query("INSERT INTO tb_artikel_language(id_artikel,judul,isi,id_language) VALUES 
-                    ('".$last_id."','".$judul3."','".$isi."','".$langprov[0]->id_language."')");
-                
-
+                for ($b=1; $b <= $jumlah_lang ; $b++) { 
+                    $exe2 = $this->db->query("INSERT INTO tb_artikel_language(id_artikel,judul,isi,id_language) VALUES 
+                    ('".$last_id."','".${"judul$b"}."','".${"isi$b"}."','".$b."')");
+                }
         return true;            
     }
 
@@ -216,8 +139,7 @@ class M_artikel extends CI_Model{
         $id_provinsi = $this->input->post('id_provinsi');
         $id_kategori = $this->input->post('id_kategori_forum');
         $tanggal = $this->input->post('tanggal');
-        $jumlah_lang = $this->m_artikel->jumlahbahasa("Indonesia", "English");
-        $lang = $this->m_artikel->language("Indonesia", "English");
+        $jumlah_lang = $this->m_quiz->jumlahbahasa();
 
         $config = array(
         'allowed_types' => 'jpg|jpeg|gif|png',
@@ -262,23 +184,17 @@ class M_artikel extends CI_Model{
         }
 
 
-        for ($a=1; $a <= $jumlah_lang+1; $a++) {
+        for ($a=1; $a <= $jumlah_lang; $a++) {
             ${"judul$a"} = $this->input->post('judul'.$a.'');
             ${"isi$a"} = $this->input->post('isi'.$a.'');
         }
-        
 
-        $exe2 = $this->db->query("UPDATE tb_artikel_language SET judul='".$judul1."',isi='".$isi1."' 
-            WHERE id_artikel='".$id_artikel."' AND id_language='".$lang[0]->id."'");
+                for ($b=1; $b <= $jumlah_lang ; $b++) { 
+
+                    $exe2 = $this->db->query("UPDATE tb_artikel_language SET judul='".${"judul$b"}."',isi='".${"isi$b"}."' 
+                        WHERE id_artikel='".$id_artikel."' AND id_language='".$b."'");
                     
-        $exe3 = $this->db->query("UPDATE tb_artikel_language SET judul='".$judul2."',isi='".$isi2."' 
-            WHERE id_artikel='".$id_artikel."' AND id_language='".$lang[1]->id."'");        
-
-        $langprov = $this->m_artikel->langprov($id_provinsi);
-
-        $exe4 = $this->db->query("UPDATE tb_artikel_language SET judul='".$judul3."',isi='".$isi3."' 
-            WHERE id_artikel='".$id_artikel."' AND id_language='".$langprov[0]->id_language."'");
-        
+                }
                 
     return true;
     }

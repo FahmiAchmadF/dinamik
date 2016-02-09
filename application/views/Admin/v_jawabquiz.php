@@ -64,7 +64,7 @@ $(document).ready(function(){
 		else{
 			$("#soal" + hider).hide();
 			createNextButton(i);
-		} 
+		}
 
 	});
     function submit(){

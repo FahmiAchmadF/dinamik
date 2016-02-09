@@ -5,7 +5,7 @@
     </div>
     <div class="panel-body">
     <h2> <a href="<?php echo base_url();?>admin/c_kategori_forum/tambah_kategori_forum" class="btn btn-success">Tambah</a> </h2>
-        <table id="tabel" class="table table-striped responsive-utilities jambo_table">
+        <table id="example" class="table table-striped responsive-utilities jambo_table">
                 <thead>
                     <th>No </th>
                     <th>Kategori</th>
@@ -49,13 +49,4 @@
     </div>
     <div class="panel-footer">
     </div>
-
-    <!-- DATA TABES SCRIPT -->
-    <script src="<?php echo base_url();?>asset/datatables/jquery.dataTables.min.js" type="text/javascript"></script>
-    <script src="<?php echo base_url();?>asset/datatables/dataTables.bootstrap.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      $(function () {
-        $("#tabel").DataTable();
-      });
-    </script>
 <?php include('include/footer.php');?>
