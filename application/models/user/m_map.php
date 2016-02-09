@@ -17,13 +17,13 @@ class M_map extends CI_Model
         $result = $query->result();
         return $result;   
     }
-    function cari_provinsi($provinsi)
+    function cari_provinsi($id_provinsi)
     {
         $this->db->select('*');
         $this->db->from('tb_provinsi');
         $this->db->order_by('provinsi');
         $this->db->join('tb_language', 'tb_language.id = tb_provinsi.id_language'); 
-        $this->db->where('tb_provinsi.provinsi',$provinsi);
+        $this->db->where('tb_provinsi.id',$id_provinsi);
         $query = $this->db->get();
         $result = $query->result();
         return $result;   

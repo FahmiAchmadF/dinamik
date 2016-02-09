@@ -56,4 +56,13 @@
 	//berita
 	$lang['text_berita_judul'] = 'Berita';
 
+	//index per provinsi
+	//jawa
+	$lang['jawa_selamat_datang'] = 'Selamat Datang';
+	$lang['jawa_text1'] = 'Dinas Pariwisata DIY memiliki visi dan misi mewujudkan Yogyakarta sebagai daerah<br>
+	 pariwisata berbasis budaya yang bertumpu pada kekuatan dan keunggulan budaya lokal<br>
+	 dan dapat menjadi lokomotif pembangunan Daerah Istimewa Yogyakarta secara<br>
+	 menyeluruh.';
+
+
 ?>

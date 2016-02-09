@@ -56,4 +56,11 @@ Warga bisa Maringi hadiah lan Respecting Pentinge Budaya iku Kanggo Negara Sing 
 	//berita
 	$lang['text_berita_judul'] = 'Warta';
 
+	//index per provinsi
+	//jawa
+	$lang['jawa_selamat_datang'] = 'Selamat Datang';
+	$lang['jawa_text1'] = 'Kantor Pariwisata Yogyakarta wis éling sesanti lan misi saka Yogyakarta minangka wilayah
+	 Wisata budaya basis sing gumantung ing kekuatan lan kaunggulan saka budaya lokal<br>
+	 lan bisa dadi lokomotif pembangunan saka Daerah Istimewa Yogyakarta
+	 minangka wutuh..';
 ?>

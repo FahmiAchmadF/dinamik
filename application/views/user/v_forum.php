@@ -118,7 +118,9 @@
             <hr class="style2">
           <br>
      <?php foreach ($postingan_populer as $data):?>
-        <p class="content-sidebar-content"><a href="#"><?php echo $data->judul;?></a></p>
+        <p class="content-sidebar-content">
+        <a href="<?php echo base_url();?>user/c_forum/tampil_topik/<?php echo $data->id_topik;?>">
+        <?php echo $data->judul;?></a></p>
           <hr class="style1">
        <?php endforeach;?>
       </div>

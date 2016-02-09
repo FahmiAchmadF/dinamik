@@ -1,5 +1,8 @@
 <?php include('include/header.php');?>
-
+  <!-- //quiz -->
+  <!-- <script src="<?php echo base_url();?>assets_users/js/quiz.js" type="text/javascript"></script> -->
+  <!--  -->
+  
 <div id="demo" >
 <div class="box" >
   <div class="container-1">
