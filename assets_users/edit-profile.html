@@ -1,0 +1,226 @@
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="icon" type="icon" href="img/logo.png" type="image/png">
+  <title>Ayo Berbudaya</title>
+
+</head>
+<body>
+<div class="fixed" style="z-index:99999;">
+  <input type="checkbox" id="menuToggle">
+  <label for="menuToggle" class="menu-icon" style="height:60px;padding-top:15px;">&#9776;</label>
+  <header>
+    <div id="brnad">Ayo Berbudaya</div><span class="responsive">Abud</span>
+    <div id="menu">Nama Pengguna <i class="fa fa-profile"><div class="circle-1">
+  
+  <img src="img/jaipongan.jpg" alt="Foto Profile" />
+  
+</div><span class="menu-arrow" style="margin-left:10px">&#9660;</span></i></div>
+<div id="ddmenu">
+<ul>
+<li>Edit Akun <i class="fa fa-gear fa-profile"></i></li>
+<li>Keluar <i class="fa fa-sign-out fa-profile"></i></li>
+</ul> 
+</div> 
+    <script>
+     $("#menu").click (function(){          if($("#ddmenu").hasClass("animationclas"))
+          {            $("#ddmenu").removeClass("animationclas").addClass("removeanimation");
+          }
+          else
+          {          $("#ddmenu").removeClass("removeanimation").addClass("animationclas");
+          }
+         });
+    </script>
+  </header>
+  <nav class="menu" id="primary_nav_wrap">
+    <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Categories <span class="menu-arrow">&#9660;</span></a>
+               <ul>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               </ul>
+          </li>
+          <li><a href="#">Forum <span class="menu-arrow">&#9660;</span></a>
+               <ul>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               </ul>
+          </li>
+          <li><a href="#">Test</a></li>
+     </ul>
+  </nav>
+</div>
+
+
+<div class="wrapper">
+  <div class="profile">
+    <div class="content-edit">
+      <h1>Edit Profile</h1>
+      <form action="">
+        <!-- Photo -->
+        <fieldset>
+          <div class="grid-35">
+            <label for="avatar">Your Photo</label>
+          </div>
+          <div class="grid-65">
+            <span class="photo" title="Upload your Avatar!"></span>
+            <input type="file" class="upload" />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="grid-35">
+            <label for="fname">First Name</label>
+          </div>
+          <div class="grid-65">
+            <input type="text" id="fname" tabindex="1" />
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="grid-35">
+            <label for="lname">Last Name</label>
+          </div>
+          <div class="grid-65">
+            <input type="text" id="lname" tabindex="2" />
+          </div>
+        </fieldset>
+        <!-- Description about User -->
+        <fieldset>
+          <div class="grid-35">
+            <label for="description">About you</label>
+          </div>
+          <div class="grid-65">
+            <textarea name="" id="" cols="30" rows="auto" tabindex="3"></textarea>
+          </div>
+        </fieldset>
+        <!-- Location -->
+        <fieldset>
+          <div class="grid-35">
+            <label for="location">Location</label>
+          </div>
+          <div class="grid-65">
+            <input type="text" id="location" tabindex="4" />
+          </div>
+        </fieldset>
+        <!-- Country -->
+        <fieldset>
+          <div class="grid-35">
+            <label for="country">Country</label>
+          </div>
+          <div class="grid-65">
+            <input type="text" id="country" tabindex="5" />
+          </div>
+        </fieldset>
+        <!-- Email -->
+        <fieldset>
+          <div class="grid-35">
+            <label for="email">Email Address</label>
+          </div>
+          <div class="grid-65">
+            <input type="email" id="email" tabindex="6" />
+          </div>
+        </fieldset>
+        <!-- Looking for Work -->
+        <fieldset>
+          <div class="grid-35">
+            <label for="forHire">Looking for Work</label>
+          </div>
+          <div class="grid-65">
+            <select name="work" id="forHire" tabindex="7" class="profile-edit">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+        </fieldset>
+        <!-- Highest Qualification -->
+        <fieldset>
+          <div class="grid-35">
+            <label for="qualification">Highest level of Education</label>
+          </div>
+          <div class="grid-65">
+            <select name="qualification" id="qualification" tabindex="8" class="profile-edit">
+              <option selected="selected" value="--------------" disabled>--------------</option>
+              <option value="primary_school">Primary school or equivalent</option>
+              <option value="high_school">High school or equivalent</option>
+              <option value="associate">Associate degree or equivalent</option>
+              <option value="bachelors">Bachelor's degree or equivalent</option>
+              <option value="post_graduate">Post-graduate or equivalent</option>
+            </select>
+          </div>
+        </fieldset>
+        <!-- School -->
+        <fieldset>
+          <div class="grid-35">
+            <label for="school">School Name</label>
+          </div>
+          <div class="grid-65">
+            <input type="text" id="school" tabindex="9" />
+          </div>
+        </fieldset>
+        <!-- Company Name -->
+        <fieldset>
+          <div class="grid-35">
+            <label for="company">Company Name</label>
+          </div>
+          <div class="grid-65">
+            <input type="text" id="company" tabindex="10" />
+          </div>
+        </fieldset>
+        <!-- Job Position -->
+        <fieldset>
+          <div class="grid-35">
+            <label for="position">Job Title</label>
+          </div>
+          <div class="grid-65">
+            <input type="text" id="position" tabindex="11" />
+          </div>
+        </fieldset>
+        <!-- Linkedin URL -->
+        <fieldset>
+          <div class="grid-35">
+            <label for="linkedin">LinkedIn URL</label>
+          </div>
+          <div class="grid-65">
+            <input type="text" id="linkedin" tabindex="12" />
+          </div>
+        </fieldset>
+        <!-- Github URL -->
+        <fieldset>
+          <div class="grid-35">
+            <label for="github">Github URL</label>
+          </div>
+          <div class="grid-65">
+            <input type="text" id="github" tabindex="13" />
+          </div>
+        </fieldset>
+        <!-- Website URL -->
+        <fieldset style="border-bottom: none;">
+          <div class="grid-35">
+            <label for="website">Website URL</label>
+          </div>
+          <div class="grid-65">
+            <input type="text" id="website" tabindex="13" />
+          </div>
+        </fieldset>
+        <fieldset>
+          <input type="button" class="Btn-profil cancel" value="Cancel" />
+          <input type="submit" class="Btn-profil" value="Save Changes" />
+        </fieldset>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,180 @@
+<html>
+<head>
+<link rel="stylesheet" href="style/style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link rel="icon" type="icon" href="img/logo.png" type="image/png">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Forum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body style="background-color:#e9e9e9;">
+<div class="fixed" style="z-index:99999;">
+  <input type="checkbox" id="menuToggle">
+  <label for="menuToggle" class="menu-icon">&#9776;</label>
+  <header>
+    <div id="brnad">Ayo Berbudaya</div><span class="responsive">Abud</span>
+    <div id="menu">Nama Pengguna <i class="fa fa-profile"><div class="circle-1">
+  
+  <img src="img/jaipongan.jpg" alt="Foto Profile" />
+  
+</div><span class="menu-arrow" style="margin-left:10px">&#9660;</span></i></div>
+<div id="ddmenu">
+<ul>
+<li>Edit Akun <i class="fa fa-gear fa-profile"></i></li>
+<li>Keluar <i class="fa fa-sign-out fa-profile"></i></li>
+</ul> 
+</div> 
+    <script>
+     $("#menu").click (function(){          if($("#ddmenu").hasClass("animationclas"))
+          {            $("#ddmenu").removeClass("animationclas").addClass("removeanimation");
+          }
+          else
+          {          $("#ddmenu").removeClass("removeanimation").addClass("animationclas");
+          }
+         });
+    </script>
+  </header>
+  <nav class="menu" id="primary_nav_wrap">
+    <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Categories <span class="menu-arrow">&#9660;</span></a>
+               <ul>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               </ul>
+          </li>
+          <li><a href="#">Forum <span class="menu-arrow">&#9660;</span></a>
+               <ul>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               </ul>
+          </li>
+          <li><a href="#">Test</a></li>
+     </ul>
+  </nav>
+</div>
+    <div id="demo" >
+<div class="box" >
+  <div class="container-1">
+      <span class="icon"><img src="img/search icon.png"></span>
+      <input type="search" id="search" placeholder="Cari Postingan,Kategori,Q&A" />
+  </div>
+</div>
+</div>
+<br>
+<br>
+    <div class="columnsContainer2">
+      <div class="leftColumn2">
+      <div class="create-comment">
+      <img class="img-valign" src="img/make-comment.png" alt="" />
+          <span class="title-create-comment">Buat Balas Postingan </span>
+      </div>
+      <div class="artikel-container">
+        <p class="title-artikel">Jaipong Sangat Terkenal Di Amerika</p>
+          <br>
+        <img class="img-valign" src="img/forum-talk.png" alt="" />
+          <span class="non-data-text">Oleh </span><span class="data-text">Fajar S J</span><span class="non-data-text"> » </span></span><span class="non-data-text">Senin 18 Februari 2015</span><img class="img-valign" src="img/reply-comment.png" alt="" align="right"/><span class="non-data-text-quote" style="float:right;margin-top:5px;margin-right:5px;">Balas Dengan Quote</span>
+         <hr class="style3">
+         <!-- ISI ARTIKEL -->
+        <img src="img/header_bg.jpg" alt="" />
+        <br>
+        <br>
+        <p align="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis, metus quis feugiat faucibus, lorem nunc aliquam nunc, eget faucibus massa nisi vitae orci. Nulla semper ullamcorper malesuada. Ut convallis feugiat consequat. Vestibulum pharetra luctus malesuada. Morbi varius viverra orci, sit amet fermentum nunc ultricies in. Donec non mi a diam porttitor accumsan ut eu lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris volutpat ut purus fermentum accumsan. Nunc maximus mattis luctus. Vivamus sit amet tellus convallis, vulputate dui id, malesuada lacus. Nullam vitae purus quam. In mollis bibendum mi, non molestie ligula porttitor nec.</p>
+       </div>
+
+       <div class="re-artikel-container">
+        <p class="title-artikel">RE : Jaipong Sangat Terkenal Di Amerika</p>
+          <br>
+        <img class="img-valign" src="img/forum-talk.png" alt="" />
+          <span class="non-data-text">Komentar Oleh </span><span class="data-text">Billy S P S</span><span class="non-data-text"> » </span></span><span class="non-data-text">Senin 18 Februari 2015</span><img class="img-valign" src="img/reply-comment.png" alt="" align="right"/>
+          <span class="non-data-text-quote" style="float:right;margin-top:5px;margin-right:5px;">Balas Dengan Quote</span>
+         <hr class="style3">
+
+         <img class="img-valign" src="img/quote.png" alt="" />
+          <span class="quote-text"><a>Fajar SJ</a> Menulis : </span>
+         <div class="comment-artikel-container">
+<img src="img/header_bg.jpg" alt="" />
+        <p align="center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis, metus quis feugiat faucibus, lorem nunc aliquam nunc, eget faucibus massa nisi vitae orci. Nulla semper ullamcorper malesuada. Ut convallis feugiat consequat. Vestibulum pharetra luctus malesuada. Morbi varius viverra orci, sit amet fermentum nunc ultricies in. Donec non mi a diam porttitor accumsan ut eu lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris volutpat ut purus fermentum accumsan. Nunc maximus mattis luctus. Vivamus sit amet tellus convallis, vulputate dui id, malesuada lacus. Nullam vitae purus quam. In mollis bibendum mi, non molestie ligula porttitor nec.</p> 
+        </div>
+        <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis, metus quis feugiat faucibus, lorem nunc aliquam nunc, eget faucibus massa nisi vitae orci. Nulla semper ullamcorper malesuada. Ut convallis feugiat consequat. Vestibulum pharetra luctus malesuada. Morbi varius viverra orci, sit amet fermentum nunc ultricies in. Donec non mi a diam porttitor accumsan ut eu lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris volutpat ut purus fermentum accumsan. Nunc maximus mattis luctus. Vivamus sit amet tellus convallis, vulputate dui id, malesuada lacus. Nullam vitae purus quam. In mollis bibendum mi, non molestie ligula porttitor nec.</p>
+       </div>
+      </div>
+
+
+<!-- Side -->
+
+      <div class="rightColumn2">
+<a href="#" data-text="Buat Artikel" class="button-cate-hover">Buat Artikel</a>
+<br>
+<br>
+<br>
+<br>
+
+<div class="content-sidebar">
+        <p class="content-sidebar-title">Postingan Populer</p>
+          <br>
+            <hr class="style2">
+          <br>
+        <p class="content-sidebar-content"><a href="#">Budaya Jaipong Di Amerika</a></p>
+          <hr class="style1">
+        <p class="content-sidebar-content"><a href="#">Budaya Jaipong Di Amerika</a></p>
+          <hr class="style1">
+        <p class="content-sidebar-content"><a href="#">Budaya Jaipong Di Amerika</a></p>
+          <hr class="style1">
+        <p class="content-sidebar-content"><a href="#">Budaya Jaipong Di Amerika</a></p>
+          <hr class="style1">
+        <p class="content-sidebar-content"><a href="#">Budaya Jaipong Di Amerika</a></p>
+          <hr class="style1">
+      </div>
+      <div class="content-sidebar" style="margin-top:10px;white-space: nowrap;">
+        <p class="content-sidebar-title">KATEGORI</p>
+          <br>
+            <hr class="style2">
+          <br>
+          <div class="circle">12</div>
+          <p class="content-sidebar-content-2">Musik</p>
+            <hr class="style1">
+          <div class="circle">12</div>
+          <p class="content-sidebar-content-2">Musik</p>
+            <hr class="style1">
+          <div class="circle">12</div>
+          <p class="content-sidebar-content-2">Musik</p>
+            <hr class="style1">
+      </div>
+      <div class="content-sidebar" style="margin-top:10px;white-space: nowrap;">
+        <p class="content-sidebar-title">FORUM STATISTIK</p>
+          <br>
+            <hr class="style2">
+          <br>
+        <p class="number">69</p>
+          <p class="content-sidebar-content-2">AKUN</p>
+            <hr class="style1">
+        <p class="number">69</p>
+          <p class="content-sidebar-content-2">POSTINGAN</p>
+            <hr class="style1">
+        <p class="number">69</p>
+          <p class="content-sidebar-content-2">KOMENTAR</p>
+            <hr class="style1">
+      </div>
+      </div>
+      </div>
+    </div>
+    <br>
+<br>
+<footer class="site-footer">
+  &copy; Copyright Logic (2015/2016)
+</footer>
+
+</body>
+</html>

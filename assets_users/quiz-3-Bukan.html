@@ -1,0 +1,193 @@
+<html>
+<head>
+<title>Quiz</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+<link rel="stylesheet" href="style/style.css">
+<link rel="stylesheet" href="https://rawgit.com/FortAwesome/Font-Awesome/master/css/font-awesome.css">
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+<script src="http://www.openjs.com/scripts/events/keyboard_shortcuts/shortcut.js"></script>
+</head>
+<body style="background-color:#e9e9e9;">
+  <div class="fixed" style="z-index:99999;">
+  <input type="checkbox" id="menuToggle">
+  <label for="menuToggle" class="menu-icon">&#9776;</label>
+  <header>
+    <div id="brnad">Ayo Berbudaya</div>
+  </header>
+  <nav class="menu" id="primary_nav_wrap">
+    <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Categories <span class="menu-arrow">&#9660;</span></a>
+               <ul>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               </ul>
+          </li>
+          <li><a href="#">Forum <span class="menu-arrow">&#9660;</span></a>
+               <ul>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               </ul>
+          </li>
+          <li><a href="#">Test</a></li>
+     </ul>
+  </nav>
+</div>
+    <div id="demo" >
+<div class="box" >
+  <div class="container-1">
+      <span class="icon"><img src="img/search icon.png"></span>
+      <input type="search" id="search" placeholder="Cari Postingan,Kategori,Q&A" />
+  </div>
+</div>
+</div>
+<br>
+<br>
+    <div class="columnsContainer2">
+      <div class="leftColumn2">
+
+<fieldset class="question" name="first_question">
+<legend class="questionNum">Question 1</legend>
+<p>What is the correct answer? (A.)</p>
+  <input value="A." type="radio" name="answer1" class="quiz3">A.</input><br>
+  <input value="B." type="radio" name="answer1" class="quiz3">B.</input><br>
+  <input value="C." type="radio" name="answer1" class="quiz3">C.</input><br>
+  <input value="D." type="radio" name="answer1" class="quiz3">D.</input>
+<i id="correct1" class="fa fa-check-circle-o"/></i>
+<i id="wrong1" class="fa fa-times-circle-o"></i>
+<br><br>
+</fieldset><br>
+
+<fieldset class="question" name="second_question">
+<legend class="questionNum">Question 2</legend>
+<p>Type in the correct answer. ("This is an input")</p>
+<input id="type" placeholder="Type here"></input><br><br>
+<i id="correct2" class="fa fa-check-circle-o"/></i>
+<i id="wrong2" class="fa fa-times-circle-o"></i>    
+</fieldset><br>
+
+<fieldset class="question" name="third_question">
+<legend class="questionNum">Question 3</legend>
+  <p>Select all that apply (Any/None)</p>
+  
+  <input value="1." name="check" type="checkbox" class="quiz3">1.</input><br><br>
+  <input value="2." name="check" type="checkbox" class="quiz3">2.</input><br><br>
+  <input value="3." name="check" type="checkbox" class="quiz3">3.</input><br><br>
+  <input value="4." name="check" type="checkbox" class="quiz3">4.</input>
+
+<i id="correct3" class="fa fa-check-circle-o"/></i>
+<i id="wrong3" class="fa fa-times-circle-o"></i><br><br>  
+</fieldset><br><br>
+
+<div id="position">
+<input id="submit" value="Submit" type="submit"></input><br>
+</div>
+
+
+
+
+      </div>
+
+
+<!-- Side -->
+      <div class="rightColumn2">
+<div class="content-sidebar">
+        <p class="content-sidebar-title">Postingan Populer</p>
+          <br>
+            <hr class="style2-create">
+          <br>
+        <p class="content-sidebar-content"><a href="#" class="a-none">Budaya Jaipong Di Amerika</a></p>
+          <hr class="style1">
+        <p class="content-sidebar-content"><a href="#" class="a-none">Budaya Jaipong Di Amerika</a></p>
+          <hr class="style1">
+        <p class="content-sidebar-content"><a href="#" class="a-none">Budaya Jaipong Di Amerika</a></p>
+          <hr class="style1">
+        <p class="content-sidebar-content"><a href="#" class="a-none">Budaya Jaipong Di Amerika</a></p>
+          <hr class="style1">
+        <p class="content-sidebar-content"><a href="#" class="a-none">Budaya Jaipong Di Amerika</a></p>
+          <hr class="style1">
+      </div>
+      <div class="content-sidebar" style="margin-top:10px;white-space: nowrap;">
+        <p class="content-sidebar-title">KATEGORI</p>
+          <br>
+            <hr class="style2-create">
+          <br>
+          <div class="circle">12</div>
+          <p class="content-sidebar-content-2"><a href="#" class="a-none">Musik</a></p>
+            <hr class="style1">
+          <div class="circle">12</div>
+          <p class="content-sidebar-content-2"><a href="#" class="a-none">Musik</a></p>
+            <hr class="style1">
+          <div class="circle">12</div>
+          <p class="content-sidebar-content-2"><a href="#" class="a-none">Musik</a></p>
+            <hr class="style1">
+      </div>
+      <div class="content-sidebar" style="margin-top:10px;white-space: nowrap;">
+        <p class="content-sidebar-title">FORUM STATISTIK</p>
+          <br>
+            <hr class="style2-create">
+          <br>
+        <p class="number">69</p>
+          <p class="content-sidebar-content-2">AKUN</p>
+            <hr class="style1">
+        <p class="number">69</p>
+          <p class="content-sidebar-content-2">POSTINGAN</p>
+            <hr class="style1">
+        <p class="number">69</p>
+          <p class="content-sidebar-content-2">KOMENTAR</p>
+            <hr class="style1">
+      </div>
+      </div>
+      </div>
+    </div>
+    <br>
+<script>
+$("#submit").click(function() {
+  checker();
+});
+shortcut.add("enter", function() {
+  checker();
+});
+function checker() {
+//answer1
+if($("input[type='radio']:checked").val() === "A.") {
+$("fieldset[name='first_question']").animate({"background-color": "#009900"}, 500);
+  $("#correct1").animate({"opacity": "1"}, 500);
+  $("#wrong1").animate({"opacity": "0"}, 500);
+} 
+else {           $("fieldset[name='first_question']").animate({"background-color": "rgb(220,30,30)"}, 500);
+  $("#wrong1").animate({"opacity": "1"}, 500);
+  $("#correct1").animate({"opacity": "0"}, 500);
+}
+//answer2
+var string = "this is an input";
+if($("#type").val().toLowerCase() === string) { 
+$("fieldset[name='second_question']").animate({"background-color": "#009900"}, 500);
+  $("#correct2").animate({"opacity": "1"}, 500);
+  $("#wrong2").animate({"opacity": "0"}, 500);
+}
+else {
+$("fieldset[name='second_question']").animate({"background-color": "rgb(220,30,30)"}, 500);
+  $("#wrong2").animate({"opacity": "1"}, 500);
+  $("#correct2").animate({"opacity": "0"}, 500);
+}
+//answer3 
+if($("input[type='checkbox']:checked")) { $("fieldset[name='third_question']").animate({"background-color": "#009900"}, 500);
+  $("#correct3").animate({"opacity": "1"}, 500);
+  $("#wrong3").animate({"opacity": "0"}, 500);
+}
+};
+</script>
+</body>
+</html>

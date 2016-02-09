@@ -1,0 +1,181 @@
+<html>
+<head>
+<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+ <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootswatch/3.3.2/flatly/bootstrap.min.css'>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+<title>Forum</title>
+<link rel="stylesheet" href="style/style.css">
+
+</head>
+<body style="background-color:#e9e9e9;">
+  <div class="fixed" style="z-index:99999;">
+  <input type="checkbox" id="menuToggle">
+  <label for="menuToggle" class="menu-icon">&#9776;</label>
+  <header>
+    <div id="brnad">Ayo Berbudaya</div><span class="responsive">Abud</span>
+    <div id="menu">Nama Pengguna <i class="fa fa-profile"><div class="circle-1">
+  
+  <img src="img/jaipongan.jpg" alt="Foto Profile" />
+  
+</div><span class="menu-arrow" style="margin-left:10px">&#9660;</span></i></div>
+<div id="ddmenu">
+<ul>
+<li>Edit Akun <i class="fa fa-gear fa-profile"></i></li>
+<li>Keluar <i class="fa fa-sign-out fa-profile"></i></li>
+</ul> 
+</div> 
+    <script>
+     $("#menu").click (function(){          if($("#ddmenu").hasClass("animationclas"))
+          {            $("#ddmenu").removeClass("animationclas").addClass("removeanimation");
+          }
+          else
+          {          $("#ddmenu").removeClass("removeanimation").addClass("animationclas");
+          }
+         });
+    </script>
+  </header>
+  <nav class="menu" id="primary_nav_wrap">
+    <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">Categories <span class="menu-arrow">&#9660;</span></a>
+               <ul>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               </ul>
+          </li>
+          <li><a href="#">Forum <span class="menu-arrow">&#9660;</span></a>
+               <ul>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               <li><a href="#">Dropdown</a></li>
+               </ul>
+          </li>
+          <li><a href="#">Test</a></li>
+     </ul>
+  </nav>
+</div>
+  	<div id="demo" >
+<div class="box" >
+  <div class="container-1">
+      <span class="icon"><img src="img/search icon.png"></span>
+      <input type="search" id="search" placeholder="Cari Postingan,Kategori,Q&A" />
+  </div>
+</div>
+</div>
+<br>
+<br>
+  	<div class="columnsContainer2">
+	  	<div class="leftColumn2">
+      <div class="container">
+      <h1 class="title-create">Buat Postingan Baru</h1>
+      <input type="text" placeholder="Nama Postingan" id="post-title">
+      <span class="custom-dropdown custom-dropdown--tomato">
+    <select class="custom-dropdown__select custom-dropdown__select--tomato">
+        <option>Pilih Categori</option>
+        <option>Musik</option>
+        <option>Musik</option>
+        <option>Musik</option>
+        <option>Musik</option>
+    </select>
+</span>
+<br>
+<br>
+  <div class="row" style="margin-left:-1.5%;">
+    <div class="col-sm-12" >
+
+      <div class="toolbar btn-group">
+        <button class="btn btn-default" data-command-name="h3" alt="Header"><span class="fa fa-header"></span></button>
+        <button class="btn btn-default" data-command-name="bold"><span class="fa fa-bold"></span></button>
+        <button class="btn btn-default" data-command-name="italic"><span class="fa fa-italic"></span></button>
+        <button class="btn btn-default" data-command-name="underline"><span class="fa fa-underline"></span></button>
+        <button class="btn btn-default" data-command-name="strikeThrough"><span class="fa fa-strikethrough"></span></button>
+        <button class="btn btn-default" data-command-name="image"><span class="fa fa-image"></span></button>
+        <span class="space" style="border-color:#c8a56f;"></span>
+        <button class="btn btn-default" data-command-name="insertOrderedList"><span class="fa fa-list-ol"></span></button>
+        <button class="btn btn-default" data-command-name="insertUnorderedList"><span class="fa fa-list"></span></button>
+        <button class="btn btn-default xs-last" data-command-name="blockquote"><span class="fa fa-quote-left"></span></button>
+        <span class="space hidden-xs" style="border-color:#c8a56f;"></span>
+        <button class="btn btn-default hidden-xs" data-command-name="undo"><span class="fa fa-undo"></span></button>
+        <button class="btn btn-default hidden-xs" data-command-name="redo"><span class="fa fa-repeat"></span></button>
+        <span class="space hidden-xs" style="border-color:#c8a56f;"></span>
+        <button class="btn btn-default hidden-xs" data-command-name="removeFormat"><span class="fa fa-eraser"></span></button>
+      </div>
+      <div class="form-group" contenteditable>
+        <div class="scribe form-control"></div>
+      </div>
+      <textarea class="scribe-html"></textarea>
+      <button class="btn btn-default btn-success">Buat <span class="fa fa-check"></span></button>
+
+<!-- <script src="http://guardian.github.io/scribe/bower_components/requirejs/require.js" data-main="https://s3-us-west-2.amazonaws.com/s.cdpn.io/20625/example2.js"></script> -->
+
+    </div>
+  </div>
+</div>
+
+
+	  	</div>
+
+
+<!-- Side -->
+	  	<div class="rightColumn2">
+<div class="content-sidebar">
+        <p class="content-sidebar-title">Postingan Populer</p>
+          <br>
+            <hr class="style2-create">
+          <br>
+        <p class="content-sidebar-content"><a href="#" class="a-none">Budaya Jaipong Di Amerika</a></p>
+          <hr class="style1">
+        <p class="content-sidebar-content"><a href="#" class="a-none">Budaya Jaipong Di Amerika</a></p>
+          <hr class="style1">
+        <p class="content-sidebar-content"><a href="#" class="a-none">Budaya Jaipong Di Amerika</a></p>
+          <hr class="style1">
+        <p class="content-sidebar-content"><a href="#" class="a-none">Budaya Jaipong Di Amerika</a></p>
+          <hr class="style1">
+        <p class="content-sidebar-content"><a href="#" class="a-none">Budaya Jaipong Di Amerika</a></p>
+          <hr class="style1">
+      </div>
+      <div class="content-sidebar" style="margin-top:10px;white-space: nowrap;">
+        <p class="content-sidebar-title">KATEGORI</p>
+          <br>
+            <hr class="style2-create">
+          <br>
+          <div class="circle">12</div>
+          <p class="content-sidebar-content-2"><a href="#" class="a-none">Musik</a></p>
+            <hr class="style1">
+          <div class="circle">12</div>
+          <p class="content-sidebar-content-2"><a href="#" class="a-none">Musik</a></p>
+            <hr class="style1">
+          <div class="circle">12</div>
+          <p class="content-sidebar-content-2"><a href="#" class="a-none">Musik</a></p>
+            <hr class="style1">
+      </div>
+      <div class="content-sidebar" style="margin-top:10px;white-space: nowrap;">
+        <p class="content-sidebar-title">FORUM STATISTIK</p>
+          <br>
+            <hr class="style2-create">
+          <br>
+        <p class="number">69</p>
+          <p class="content-sidebar-content-2">AKUN</p>
+            <hr class="style1">
+        <p class="number">69</p>
+          <p class="content-sidebar-content-2">POSTINGAN</p>
+            <hr class="style1">
+        <p class="number">69</p>
+          <p class="content-sidebar-content-2">KOMENTAR</p>
+            <hr class="style1">
+      </div>
+      </div>
+	  	</div>
+  	</div>
+    <br>
+<br>
+<footer class="site-footer" style="margin-top:10%;">
+  &copy; Copyright Logic (2015/2016)
+</footer>
+</body>
+</html>
