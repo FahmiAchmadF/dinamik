@@ -19,7 +19,7 @@
                 <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12">Provinsi</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <select class="select2_single form-control" required name='id_provinsi' >
+                            <select class="select2_single form-control" required name='id_provinsi' id="provinsi" readonly>
                             <?php
                             foreach ($provinsi as $provinsi) 
                             {?>
@@ -80,7 +80,7 @@
                 <strong>
                 <?php 
                 $bahasanya = $b-1;
-                    echo $lang[$bahasanya]->language; 
+                    echo $artikel_lang[$bahasanya]->language; 
                 ?>
                 </strong>
         </div>
@@ -108,7 +108,8 @@
         <div class="panel-footer"></div>
     </div>
     <?php }?>            
-                
+    
+    <div id="tampungan" class="panel panel-default"></div>            
                 
                 
 
@@ -122,8 +123,9 @@
 <script src="<?php echo base_url();?>asset/ckeditor/jquery/jQuery-2.1.4.min.js"></script>
 <script type="text/javascript" src="<?php echo base_url();?>asset/ckeditor/ckeditor.js"></script>                                  
 <script type="text/javascript">
-  
+
   $(function () {
+    
         <?php for ($ab=1; $ab <= $jumlah_lang ; $ab++) { ?>
             CKEDITOR.replace('editor<?php echo $ab;?>');
         <?php }?>

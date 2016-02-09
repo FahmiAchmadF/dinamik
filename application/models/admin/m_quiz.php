@@ -235,12 +235,11 @@ class m_quiz extends CI_Model {
 		return $query->result();
 		}
 
-		function lihatdaftarquiz($sampai,$dari){
+		function lihatdaftarquiz(){
 		$this->db->select('*');
 		$this->db->from('tb_quiz');
 			$this->db->join('tb_quiz_language', 'tb_quiz.id = tb_quiz_language.id_quiz');
 				$this->db->join('tb_kategori_quiz', 'tb_kategori_quiz.id = tb_quiz_language.id_kategori_quiz');
-					$this->db->limit($sampai,$dari);
 		$query = $this->db->get();
 		
 		return $query->result();

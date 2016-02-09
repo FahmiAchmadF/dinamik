@@ -1,36 +1,19 @@
 <?php include('include/header.php');?>
-        <section class="content-header">
-          <h1>
-            Daftar Provinsi
-          </h1>
-          <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li><a href="#">Tables</a></li>
-            <li class="active">Data tables</li>
-          </ol>
-        </section>
-
-        <!-- Main content -->
-        <section class="content">
-          <div class="row">
-            <div class="col-xs-12">
-             <div class="box">
-                <div class="box-header">
-                  <!-- <h3 class="box-title"></h3> -->
-                      <h4 align="right"> <a href="<?php echo base_url();?>admin/c_provinsi/tambah_provinsi" class="btn btn-success">Tambah</a> </h4>
-                </div><!-- /.box-header -->
-                <div class="box-body">
-                  <table id="example1" class="table table-bordered table-striped">
-                    <thead>
-                      <tr>
+    <div class="panel panel-default">
+    <div class="panel-heading">
+        <strong>Daftar provinsi</strong>
+    </div>
+    <div class="panel-body">
+    <h2> <a href="<?php echo base_url();?>admin/c_provinsi/tambah_provinsi" class="btn btn-success">Tambah</a> </h2>
+        <table id="tabel" class="table table-striped responsive-utilities jambo_table">
+            <thead>
                 <th>No </th>
                 <th>Nama Provinsi</th>
                 <th>Bahasa</th>
                     <th class=" no-link last"><span class="nobr">Pilihan</span>
-                      </tr>
-                    </thead>
-                    <tbody>
-                  <?php
+            </thead>
+                <tbody>
+                <?php
                     if(empty($list))
                     {
                     echo"
@@ -60,13 +43,20 @@
                             $no++;
                         } 
                     }
-                ?>    
-                    </tbody>
-                  </table>
-                </div><!-- /.box-body -->
-              </div><!-- /.box -->
-             </div><!-- /.col -->
-          </div><!-- /.row -->
-        </section><!-- /.content -->
+                ?>
+            </tbody>
+        </table>
+    </div>
+    <div class="panel-footer">
+    </div>
 
+    <!-- DATA TABES SCRIPT -->
+    <script src="<?php echo base_url();?>asset/datatables/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url();?>asset/datatables/dataTables.bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function () {
+        $("#tabel").DataTable();
+      });
+    </script>
+    
 <?php include('include/footer.php');?>

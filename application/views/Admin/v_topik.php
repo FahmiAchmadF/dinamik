@@ -1,38 +1,51 @@
 <?php include('include/header.php');?>
     <div class="panel panel-default">
     <div class="panel-heading">
-        <strong>Tambah Kategori Quiz</strong>
+        <strong>Daftar Topik</strong>
     </div>
     <div class="panel-body">
-    <h2> <a href="<?php echo base_url();?>admin/c_kategori_forum/tambah_kategori_forum" class="btn btn-success">Tambah</a> </h2>
         <table id="tabel" class="table table-striped responsive-utilities jambo_table">
                 <thead>
                     <th>No </th>
-                    <th>Kategori</th>
+                    <th>ID</th>
+                    <th>User</th>
+                    <th>Judul</th>
+                    <th>Kategori Forum</th>
+                    <th>Tanggal</th>
+                    <th>Status</th>
                     <th class=" no-link last"><span class="nobr">Pilihan</span>
                 </thead>
             <tbody>
             <?php
-            if(empty($kategori_forum))
+            if(empty($topik))
             {
             echo"
-            <td>  </td>
-            <td>  </td>
-            <td> Data tidak ada </td>
-            <td>  </td>
-            <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td>Data Tidak Ada</td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
             ";
             }
             else
             {
             $no = 1;
-                foreach ($kategori_forum as $data){
+                foreach ($topik as $data){
                 echo "                                  
                 <tr class='even pointer'>
                 <td>".$no."</td>
+                <td>".$data->id."</td>
+                <td>".$data->username."</td>
+                <td>".$data->judul."</td>
                 <td>".$data->kategori."</td>
+                <td>".$data->tanggal."</td>
+                <td>".$data->status."</td>
                 <td>
-                <a href='".$url."c_kategori_forum/lihat_user/".$data->id."'>
+                <a href='".$url."c_topik/lihat_user/".$data->id."'>
                 <button title='Lihat' class='btn btn-default'><i class='fa fa-dot-circle-o'></i></button>
                 </a>
                 <a href='".$url."delete_user/".$data->id."'>

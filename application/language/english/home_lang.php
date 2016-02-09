@@ -55,14 +55,5 @@
 	//berita
 	$lang['text_berita_judul'] = 'News';
 
-	//index per provinsi
-	//jawa
-	$lang['jawa_selamat_datang'] = 'Welcome to Yogyakarta';
-	$lang['jawa_text1'] = '
-Yogyakarta Tourism Office has to realize the vision and mission of Yogyakarta as the area<br>
-culture-based tourism that relies on the strength and excellence of local culture<br>
-and can become the locomotive of development Yogyakarta Special Region is<br>
-comprehensive.';
-
 
 ?>

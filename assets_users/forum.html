@@ -1,10 +1,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="style/style.css">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 <link rel="icon" type="icon" href="img/logo.png" type="image/png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -20,36 +17,16 @@
   </head>
   <body>
   <div class="fixed" style="z-index:99999;">
-  <input type="checkbox" id="menuToggle">
-  <label for="menuToggle" class="menu-icon"><div class="box-shadow-menu"></div></label>
-  <header>
-    <div id="brnad">Ayo Berbudaya</div><span class="responsive">Abud</span>
-    <div id="menu">Nama Pengguna <i class="fa fa-profile"><div class="circle-1">
-  
-  <img src="img/jaipongan.jpg" alt="Foto Profile" />
-  
-</div><span class="menu-arrow" style="margin-left:10px">&#9660;</span></i></div>
-<div id="ddmenu">
-<ul>
-<li>Edit Akun <i class="fa fa-gear fa-profile"></i></li>
-<li>Keluar <i class="fa fa-sign-out fa-profile"></i></li>
-</ul> 
-</div> 
-    <script>
-     $("#menu").click (function(){          if($("#ddmenu").hasClass("animationclas"))
-          {            $("#ddmenu").removeClass("animationclas").addClass("removeanimation");
-          }
-          else
-          {          $("#ddmenu").removeClass("removeanimation").addClass("animationclas");
-          }
-         });
-    </script>
-  </header>
+	<input type="checkbox" id="menuToggle">
+	<label for="menuToggle" class="menu-icon" style="">&#9776;</label>
+	<header>
+		<div id="brnad">Ayo Berbudaya</div>
+	</header>
   <nav class="menu" id="primary_nav_wrap">
     <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Menu</a></li>
-          <li><a href="#">Categories <span class="menu-arrow"><img src="img/keyboard53.png"></span></a>
+          <li><a href="#">Categories <span class="menu-arrow">&#9660;</span></a>
                <ul>
                <li><a href="#">Dropdown</a></li>
                <li><a href="#">Dropdown</a></li>
@@ -57,7 +34,7 @@
                <li><a href="#">Dropdown</a></li>
                </ul>
           </li>
-          <li><a href="#">Forum <span class="menu-arrow"><img src="img/keyboard53.png"></span></a>
+          <li><a href="#">Forum <span class="menu-arrow">&#9660;</span></a>
                <ul>
                <li><a href="#">Dropdown</a></li>
                <li><a href="#">Dropdown</a></li>
@@ -427,11 +404,6 @@
 
 <!-- Side -->
 	  	<div class="rightColumn">
-      <a href="#" data-text="Buat Artikel" class="button-cate-hover">Buat Artikel</a>
-      <br>
-<br>
-<br>
-<br>
 	  	<div class="content-sidebar">
 	  		<p class="content-sidebar-title">Postingan Populer</p>
 	  			<br>

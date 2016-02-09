@@ -1,10 +1,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="style/style.css">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 <link rel="stylesheet" href="forum-style-embed.css" >
 <link rel="icon" type="icon" href="img/logo.png" type="image/png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,37 +17,17 @@
 
   </head>
   <body>
-<div class="fixed" style="z-index:99999;">
-  <input type="checkbox" id="menuToggle">
-  <label for="menuToggle" class="menu-icon"><div class="box-shadow-menu"></div></label>
-  <header>
-    <div id="brnad">Ayo Berbudaya</div><span class="responsive">Abud</span>
-    <div id="menu">Nama Pengguna <i class="fa fa-profile"><div class="circle-1">
-  
-  <img src="img/jaipongan.jpg" alt="Foto Profile" />
-  
-</div><span class="menu-arrow" style="margin-left:10px">&#9660;</span></i></div>
-<div id="ddmenu">
-<ul>
-<li>Edit Akun <i class="fa fa-gear fa-profile"></i></li>
-<li>Keluar <i class="fa fa-sign-out fa-profile"></i></li>
-</ul> 
-</div> 
-    <script>
-     $("#menu").click (function(){          if($("#ddmenu").hasClass("animationclas"))
-          {            $("#ddmenu").removeClass("animationclas").addClass("removeanimation");
-          }
-          else
-          {          $("#ddmenu").removeClass("removeanimation").addClass("animationclas");
-          }
-         });
-    </script>
-  </header>
+  <div class="fixed" style="z-index:99999;">
+	<input type="checkbox" id="menuToggle">
+	<label for="menuToggle" class="menu-icon" style="">&#9776;</label>
+	<header>
+		<div id="brnad">Ayo Berbudaya</div>
+	</header>
   <nav class="menu" id="primary_nav_wrap">
     <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">Menu</a></li>
-          <li><a href="#">Categories <span class="menu-arrow"><img src="img/keyboard53.png"></span></a>
+          <li><a href="#">Categories <span class="menu-arrow">&#9660;</span></a>
                <ul>
                <li><a href="#">Dropdown</a></li>
                <li><a href="#">Dropdown</a></li>
@@ -58,7 +35,7 @@
                <li><a href="#">Dropdown</a></li>
                </ul>
           </li>
-          <li><a href="#">Forum <span class="menu-arrow"><img src="img/keyboard53.png"></span></a>
+          <li><a href="#">Forum <span class="menu-arrow">&#9660;</span></a>
                <ul>
                <li><a href="#">Dropdown</a></li>
                <li><a href="#">Dropdown</a></li>
@@ -80,9 +57,6 @@
 </div>
 <br>
 <br>
-<div class="columnsContainer">
-
-      <div class="leftColumn">
     <div class="row mt">
     <div class="large-12">
       <div class="large-12 forum-category rounded">
@@ -111,97 +85,19 @@
             Pemulai Post
           </div>
         </div>
-        
+                <?php
+               if (count($topik_top)>0) 
+               {                    
+                 $no = 1;
+                 foreach ($topik_top as $row):?>
+               
         <div class="large-12 forum-topic">
           <div class="large-1 column lpad">
-            <i class="icon-file"><img src="img/musical-notes.png"></i>
+            <i class="icon-file"><img src="<?php echo base_url();?>assets_users/fajar/img/musical-notes.png"></i>
           </div>
           <div class="large-7 small-8 column lpad">
             <span class="overflow-control">
-              <a href="#">Musik</a>
-            </span>
-            <span class="overflow-control">
-              Lorem Ipsum Dolor Sit Amet!
-            </span>
-          </div>
-          <div class="large-1 column lpad">
-            <span class="center">96587</span>
-          </div>
-          <div class="large-1 column lpad">
-            <span class="center">678</span>
-          </div>
-          <div class="large-2 small-4 column pad">
-            <span>
-              <a href="#">Bermanfaat : 2</a>
-            </span>
-            <span>08-29-2013 7:29PM</span>
-            <span>Oleh <a href="#">Nama User</a></span>
-          </div>
-        </div>
-        
-        <div class="large-12 forum-topic">
-          <div class="large-1 column lpad">
-            <i class="icon-file"><img src="img/musical-notes.png"></i>
-          </div>
-          <div class="large-7 small-8 column lpad">
-            <span class="overflow-control">
-              <a href="#">Musik</a>
-            </span>
-            <span class="overflow-control">
-              Lorem Ipsum Dolor Sit Amet!
-            </span>
-          </div>
-          <div class="large-1 column lpad">
-            <span class="center">25</span>
-          </div>
-          <div class="large-1 column lpad">
-            <span class="center">2523</span>
-          </div>
-          <div class="large-2 small-4 column pad">
-          <div>
-            <span>
-              <a href="#">Bermanfaat : 2</a>
-            </span>
-            <span>08-29-2013 7:29PM</span>
-            <span>Oleh <a href="#">Nama User</a></span>
-           </div>
-          </div>
-        </div>
-        
-        <div class="large-12 forum-topic">
-          <div class="large-1 column lpad">
-            <i class="icon-file"><img src="img/musical-notes.png"></i>
-          </div>
-          <div class="large-7 small-8 column lpad">
-            <span class="overflow-control">
-              <a href="#">Musik</a>
-            </span>
-            <span class="overflow-control">
-              Lorem Ipsum Dolor Sit Amet!
-            </span>
-          </div>
-          <div class="large-1 column lpad">
-            <span class="center">355</span>
-          </div>
-          <div class="large-1 column lpad">
-            <span class="center">215</span>
-          </div>
-          <div class="large-2 small-4 column pad">
-            <span>
-              <a href="#">Bermanfaat : 2</a>
-            </span>
-            <span>08-29-2013 7:29PM</span>
-            <span>Oleh <a href="#">Nama User</a></span>
-          </div>
-        </div>
-        
-        <div class="large-12 forum-topic">
-          <div class="large-1 column lpad">
-            <i class="icon-file"><img src="img/musical-notes.png"></i>
-          </div>
-          <div class="large-7 small-8 column lpad">
-            <span class="overflow-control">
-              <a href="#">Musik</a>
+              <a href="<?php echo base_url();?>user/c_forum/tampil_topik/<?php echo $row->id_topik;?>"><?php echo $row->judul;?></a>
             </span>
             <span class="overflow-control">
               Lorem Ipsum Dolor Sit Amet!
@@ -221,87 +117,39 @@
             <span>Oleh <a href="#">Nama User</a></span>
           </div>
         </div>
-        
+                      <?php
+                endforeach;
+                }
+                else
+                { 
+                  ?>
         <div class="large-12 forum-topic">
           <div class="large-1 column lpad">
-            <i class="icon-file"><img src="img/musical-notes.png"></i>
           </div>
           <div class="large-7 small-8 column lpad">
-            <span class="overflow-control">
-              <a href="#">Musik</a>
-            </span>
-            <span class="overflow-control">
-              Lorem Ipsum Dolor Sit Amet!
-            </span>
+<h2 align="center"> Data tidak ada </h2>
           </div>
           <div class="large-1 column lpad">
-            <span class="center">95</span>
+
           </div>
           <div class="large-1 column lpad">
-            <span class="center">234</span>
+
           </div>
           <div class="large-2 small-4 column pad">
-            <span>
-              <a href="#">Bermanfaat : 2</a>
-            </span>
-            <span>08-29-2013 7:29PM</span>
-            <span>Oleh <a href="#">Nama User</a></span>
           </div>
         </div>
-        
+                <?php
+                }   
+                ?>       
       </div>
     </div>
   </div>
   
-  </div>
-  <!-- Side -->
-      <div class="rightColumn">
-      <a href="#" data-text="Buat Artikel" class="button-cate-hover">Buat Artikel</a>
-      <br>
-<br>
-<br>
-<br>
-      <div class="content-sidebar">
-        <p class="content-sidebar-title">Postingan Populer</p>
-          <br>
-            <hr class="style2">
-          <br>
-        <p class="content-sidebar-content"><a href="#">Budaya Jaipong Di Amerika</a></p>
-          <hr class="style1">
-        <p class="content-sidebar-content"><a href="#">Budaya Jaipong Di Amerika</a></p>
-          <hr class="style1">
-        <p class="content-sidebar-content"><a href="#">Budaya Jaipong Di Amerika</a></p>
-          <hr class="style1">
-        <p class="content-sidebar-content"><a href="#">Budaya Jaipong Di Amerika</a></p>
-          <hr class="style1">
-        <p class="content-sidebar-content"><a href="#">Budaya Jaipong Di Amerika</a></p>
-          <hr class="style1">
-      </div>
-      <div class="content-sidebar" style="margin-top:10px;white-space: nowrap;">
-        <p class="content-sidebar-title">FORUM STATISTIK</p>
-          <br>
-            <hr class="style2">
-          <br>
-        <p class="number">69</p>
-          <p class="content-sidebar-content-2">AKUN</p>
-            <hr class="style1">
-        <p class="number">69</p>
-          <p class="content-sidebar-content-2">POSTINGAN</p>
-            <hr class="style1">
-        <p class="number">69</p>
-          <p class="content-sidebar-content-2">KOMENTAR</p>
-            <hr class="style1">
-      </div>
-
-      </div>
-
-    </div>
-    <br>
-<br>
+  
 
     <br>
 <br>
-<footer class="site-footer" style="margin-top:100px;">
+<footer class="site-footer">
   &copy; Copyright Logic (2015/2016)
 </footer>
 

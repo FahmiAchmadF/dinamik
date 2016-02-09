@@ -143,7 +143,7 @@ class C_quiz extends CI_Controller {
 
         $config['base_url'] = base_url().'admin/c_quiz/daftarsoal/';
 		$config['total_rows'] = $jumlah;
-		$config['per_page'] = 1;
+		$config['per_page'] = 10;
 		$config['attributes'] = array('class' => 'btn btn-default');
         $config['full_tag_open'] = '<div class="btn-group">';
         $config['full_tag_close'] = '</div>';
@@ -168,26 +168,14 @@ class C_quiz extends CI_Controller {
 	public function daftarquiz() {
 		$this->load->model('Admin/m_quiz');
 
-        $jumlah= $this->m_quiz->jumlah('tb_quiz');
+        $jumlah= $this->m_quiz->jumlah('tb_quiz'); 		
  
-		$config['base_url'] = base_url().'admin/c_quiz/daftarsoal/';
-		$config['total_rows'] = $jumlah;
-		$config['per_page'] = 10;
-		$config['attributes'] = array('class' => 'btn btn-default');
-        $config['full_tag_open'] = '<div class="btn-group">';
-        $config['full_tag_close'] = '</div>';
-        $config['cur_tag_open'] = '<button type="button" class="btn btn-danger">';
-        $config['cur_tag_close'] = '</button>';
-        $config['first_link'] = 'Awal';
-        $config['last_link'] = 'Akhir'; 		
- 
-		
 		$dari = $this->uri->segment(4);
 		$data = array(
-			'kategori' => $this->m_quiz->lihatdaftarquiz($config['per_page'],$dari),
+			'kategori' => $this->m_quiz->lihatdaftarquiz(),
 			'user' => $this->seson
 			);
-		$this->pagination->initialize($config); 
+		
 
         $this->load->view('Admin/daftarquiz', $data);
 	}

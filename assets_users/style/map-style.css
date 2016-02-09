@@ -3,282 +3,6 @@
     src: url(font/jawapalsu.ttf);
 
 }
-body, html {
-  width:100%;
-  height:100%;
-}
-
-body {
-  background-color:steelblue;
-  margin:0;
-  overflow-x: hidden;
-
-}
-p.main-title{
-  font-family: verdana;
-  font-size: 36px;
-  font-weight: bold;
-  color:white;
-}
-.container-sea {
-  background-color:lightblue;
-  height:0%;
-  position:relative;
-}
-
-.drop {
-  position:absolute;
-  animation-name: fall;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
-  top:-45deg0px;
-}
-
-.drop .tail {
-  position: absolute;
-  top:0;
-  left:0;
-  border-top-color: transparent;
-  border-right-color: transparent;
-  border-bottom-color: steelblue;
-  border-left-color:transparent;
-  border-width: 0 10px 30px 10px;
-  border-style: solid;
-  width:0;
-  height:0;
-}
-
-.drop .head {
-  position:absolute;
-  width:0;
-  height:0;
-  border-width:10px;
-  border-top-color: transparent;
-  border-right-color: transparent;
-  border-bottom-color: steelblue;
-  border-left-color:steelblue;
-  border-style:solid;
-  border-radius:50%;
-  top:20px;
-  transform:rotate(-45deg);
-}
-
-@keyframes fall {
-  0% {
-    top:-40px;
-  }
-  100% {
-    top:105%;
-  }
-}
-
-.wave {
-  position:absolute;
-  top:98%;
-  width:200px;
-  height:80px;
-  background-color:lightblue;
-  border-radius:50%;
-  animation-name: wave;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes wave {
-  from {
-    height:50px;
-  }
-  to {
-    height:20px;
-  }
-}
-
-.boat {
-  position:absolute;
-  bottom:20%;
-  left:10%;
-  width:200px;
-  height:100px;
-  animation-name: boat;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 1s;
-  z-index:1000;
-}
-
-@keyframes boat {
-  from {
-    transform: rotate(-6deg);
-  }
-  to {
-    transform: rotate(6deg);
-  }
-}
-
-.cabin {
-  width:50px;
-  height:50px;
-  background-color: white;
-  margin-left:75px;
-  position:relative;
-}
-
-.hublot {
-  width:15px;
-  height:15px;
-  border-radius:50%;
-  background-color: lightblue;
-  border: 4px solid sienna;
-  position:absolute;
-  top:10px;
-  left:10px;
-}
-
-.front {
-  position:absolute;
-  bottom:0;
-  left:0;
-  width:0;
-  height:0;
-  border-style: solid;
-  border-width: 25px;
-  border-color: indianred indianred transparent transparent;
-}
-
-.middle {
-  position: absolute;
-  bottom:0;
-  left:50px;
-  width:100px;
-  height:40px;
-  margin-bottom:10px;
-  background-color: indianred;
-}
-
-.middle .swash {
-  position:absolute;
-  width:40px;
-  height:33px;
-  border-radius:50%;
-  background-color: indianred;
-  top:25px;
-  animation-name: swash;
-  animation-iteration-count:infinite;
-  animation-direction:alternate;
-}
-
-.middle .swash:nth-child(1) {
-  left:-2px;
-}
-
-.middle .swash:nth-child(2) {
-  left:32px;
-}
-
-.middle .swash:nth-child(3) {
-  right:-2px;
-}
-
-@keyframes swash {
-  from {
-    top: 23px;
-  }
-  to {
-    top:28px;
-  }
-}
-
-.back {
-  position:absolute;
-  bottom:0;
-  right:0;
-  width:0;
-  height:0;
-  border-style: solid;
-  border-width: 25px;
-  border-color: indianred transparent transparent indianred;
-}
-
-
-.fish {
-  width:115px;
-  height:0px;
-  position:absolute;
-  animation-name: fish;
-  animation-iteration-count: infinite;
-  animation-timing-function:linear;
-  top:100%;
-  z-index:-20;
-}
-.fish .head {
-  width:0;
-  height:0;
-  border-color:darkturquoise transparent transparent darkturquoise;
-  border-width:25px;
-  border-style: solid;
-  border-radius:50%;
-  transform: rotate(-45deg);
-}
-
-.fish .eye {
-  position: absolute;
-  top:10px;
-  left:10px;
-  background-color:#000;
-  border-style: solid;
-  border-color: white;
-  border-width:3px 3px 3px 1px;
-  border-radius:50%;
-  width:8px;
-  height:8px;
-}
-
-.fish .body {
-  position:absolute;
-  top:0;
-  left:25px;
-  width: 10px;
-  height:50px;
-  background-color:darkturquoise;
-  float:left;
-  margin-left:0px;
-}
-
-.fish .tail {
-  position:absolute;
-  top:0;
-  left:35px;
-  width:0;
-  height:0;
-  border-color:transparent darkturquoise transparent darkturquoise;
-  border-width:25px 15px 25px 50px;
-  border-style: solid;
-  animation-name: fishtail;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  animation-duration:.5s;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes fish {
-  from {
-    right:-20%;
-  }
-  to {
-    right:110%;
-  }
-}
-
-@keyframes fishtail {
-  from {
-    border-right-width:15px;
-  }
-  to {
-    border-right-width:25px;
-  }
-}
 img { max-width:100%; }
 
 a {
@@ -476,7 +200,14 @@ a {
 
 /* ADD-ON
 -------------------------------------------------- */
+body:after{content:"less than 320px";font-size:1rem;font-weight:bold;position:fixed;bottom:0;width:100%;text-align:center;background-color:hsla(1,60%,40%,0.7);color:#fff;height:20px;padding-top:0;margin-left:0;left:0}@media only screen and (min-width:320px){body:after{content:"320 to 480px";background-color:hsla(90,60%,40%,0.7);height:20px;padding-top:0;margin-left:0}}@media only screen and (min-width:480px){body:after{content:"480 to 768px";background-color:hsla(180,60%,40%,0.7);height:20px;padding-top:0;margin-left:0}}@media only screen and (min-width:768px){body:after{content:"768 to 980px";background-color:hsla(270,60%,40%,0.7);height:20px;padding-top:0;margin-left:0}}@media only screen and (min-width:980px){body:after{content:"980 to 1024px";background-color:hsla(300,60%,40%,0.7);height:20px;padding-top:0;margin-left:0}}@media only screen and (min-width:1024px){body:after{content:"1024 and up";background-color:hsla(360,60%,40%,0.7);height:20px;padding-top:0;margin-left:0}}
 
+::selection { background: #ff5e99; color: #FFFFFF; text-shadow: 0; }
+::-moz-selection { background: #ff5e99; color: #FFFFFF; }
+
+a, a:focus, a:active, a:hover, object, embed { outline: none; }
+:-moz-any-link:focus { outline: none; }
+input::-moz-focus-inner { border: 0; }
   /*    Modal Reveal
     ========================================================================== */
   
@@ -572,28 +303,6 @@ a {
       height: 600px;
     }
   }
-
-   @media only screen and (min-width: 1000px) {
-      .reveal-modal.full, dialog.full {
-        width: 100vw;
-        max-width: 62.5rem;
-        height:850px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        } }
-        .jawa-tengah-full{
-          height:500px !important;
-        }
-           @media only screen and (max-width: 1000px) {
-      .reveal-modal.full, dialog.full {
-        width: 100vw;
-        max-width: 62.5rem;
-        height:1000px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        } }
   @media only screen and (min-width:1300px) and (max-width: 2000px){
 img[usemap] {
     border: none;
@@ -682,7 +391,15 @@ img[usemap] {
     width: 100%;
   }
 }
-
+ /* CSS Document */
+/* ---------- FONTAWESOME ---------- */
+/* ---------- http://fortawesome.github.com/Font-Awesome/ ---------- */
+/* ---------- http://weloveiconfonts.com/ ---------- */
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+/* ---------- ERIC MEYER'S RESET CSS ---------- */
+/* ---------- http://meyerweb.com/eric/tools/css/reset/ ---------- */
+@import url(http://meyerweb.com/eric/tools/css/reset/reset.css);
+/* ---------- FONTAWESOME ---------- */
 [class*="fontawesome-"]:before {
   font-family: 'FontAwesome', sans-serif;
 }
@@ -697,7 +414,14 @@ img[usemap] {
        box-sizing: border-box;
 }
 
-
+body {
+  background: #2c3338;
+  color: #606468;
+  font: 87.5%/1.5em 'Open Sans', sans-serif;
+  margin: 0;
+  overflow-y:auto !important;
+  overflow-x:hidden !important;
+}
 
 a {
   color: #eee;
@@ -732,8 +456,8 @@ p {
   clear: both;
 }
 
-.container-map-jawa-barat {
-  width:60%;
+.container-map {
+  width:55%;
   left: 50%;
   position:absolute;
    top: 50%;
@@ -742,7 +466,7 @@ p {
           transform: translate(-50%, -50%);
 }
 .container-map-yogyakarta {
-  width:45%;
+  width:50%;
   left: 50%;
   position:absolute;
    top: 50%;
@@ -750,13 +474,8 @@ p {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-.yogya-image{
-  width:100%;
-  height:auto;
-}
-
 .container-map-jawa-tengah {
-  margin-top:45px;
+  margin-top:40px;
   width:60%;
   left: 50%;
   position:absolute;
@@ -975,7 +694,6 @@ p {
 }
 .android-btn {
   display: inline-block;
-  width:200px;
   font-family: "Roboto";
   font-weight: 300;
   font-size: 0.9vw;
@@ -995,10 +713,7 @@ p {
   transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;;
 }
-.btn-responsive {
-  margin-top:20px;
-  margin-right:20px;
-}
+
 .android-btn.active-in {
   background: #455EDE;
 }
@@ -1165,8 +880,8 @@ animation-delay: 1.6s;
   height: 150px;
   z-index:90;
   position: absolute;
-  top: calc(14% - 75px);
-  left: calc(65% - 75px);
+  top: calc(20% - 75px);
+  left: calc(62% - 75px);
 }
 
 .sun{
@@ -1828,185 +1543,4 @@ animation-delay: 1.6s;
   100%{
     oapcity: 0;
   }
-}
-
-.ch-grid {
-    margin: 20px 0 0 0;
-    padding: 0;
-    list-style: none;
-    display: block;
-    text-align: center;
-    width: 100%;
-}
- 
-.ch-grid:after,
-.ch-item:before {
-    content: '';
-    display: table;
-}
- 
-.ch-grid:after {
-    clear: both;
-}
- 
-.ch-grid li {
-    width: 100px;
-    height: 100px;
-    display: inline-block;
-    margin: 20px;
-}
-
-
-.ch-img-1{
-   background-image:url("../img/andong.png");
- }
-
-.ch-img-2{
-  background-image:url("../img/wayang.png");
-}
-
-.ch-img-3{
-  background-image:url("../img/keraton.png");
-}
-
-
-.ch-item{
-  width:100%;
-  height:100%;
-  border-radius:50%;
-  position:relative;
-  cursor:default;
-  box-shadow:
-    inset 0 0 0 0 rgba(167,209,231,0.4),
-    inset 0 0 0 5px rgba(255,255,255,0.6),
-    0 1px 2px rgba(0,0,0,0.1);
-  transition: all 0.4s ease-in-out;
-}
-
-.ch-info {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  opacity: 0;
-  
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-  
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -o-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  
-  -webkit-backface-visibility: hidden; /*for a smooth font */
-
-}
-
-.ch-info p {
-  color: #111111;
-  text-transform: uppercase;
-  position: relative;
-  letter-spacing: 0px;
-  font-size: 8px;
-  margin: 0 0px;
-  padding: 65px 0 0 0;
-  font-family: verdana;
-  text-shadow: 
-    0 0 1px #111111, 
-    0 1px 2px rgba(0,0,0,0.3);
-}
-
-
-.ch-item:hover {
-  box-shadow: 
-    inset 0 0 0 110px rgba(167,209,231,0.4),
-    inset 0 0 0 6px rgba(255,255,255,0.8),
-    0 1px 2px rgba(0,0,0,0.1);
-}
-
-.ch-item:hover .ch-info {
-  opacity: 1;
-  
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -o-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);  
-}
-@media screen and (max-width: 1100px){
-.btn-responsive {
-  margin-top:20px;
-  margin-left:25px;
-}
-.bubble {
-  display:none;
-}
-.top-jawa-tengah{
-  margin-top:60px;
-}
-}
-@media screen and (max-width: 1050px){
-
-.wrapper-cloud-yogyakarta-map{
-  display:none;
-}
-.ch-grid {
-    margin: 50px 0 0 0;
-    padding: 0;
-    list-style: none;
-    display: block;
-    text-align: center;
-    width: 100%;
-}
-.responsive-yogya{
-  margin-top:200px;
-}
-.ch-grid {
-    margin: 50px 0 0 0;
-    padding: 0;
-    list-style: none;
-    display: block;
-    text-align: center;
-    width: 100%;
-}
-.container-map-yogyakarta {
-.yogya-image{
-  display:none;
-}
-  width:60%;
-  left: 50%;
-  position:absolute;
-   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-.btn-responsive {
-  margin-top:20px;
-  margin-left:25px;
-}
-}
-@media screen and (max-width: 550px){
-  .container-map-yogyakarta {
-  width:80%;
-  left: 50%;
-  position:absolute;
-   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-.container-map-jawa-barat {
-  width:80%;
-  left: 50%;
-  position:absolute;
-   top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
 }

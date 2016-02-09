@@ -6,18 +6,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <!-- //quiz -->
-  <script src="<?php echo base_url();?>assets_users/js/quiz.js" type="text/javascript"></script>
-
     <script src="<?php echo base_url();?>assets_users/js/typed.js" type="text/javascript"></script>
     <link rel="icon" type="icon" href="<?php echo base_url();?>assets_users/img/logo.png" type="image/png">
-  <!-- inder per provinsi -->
- <!--  <link rel="stylesheet" href="<?php echo base_url();?>assets_users/style/libs/animate.css">
-  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <script src="<?php echo base_url();?>assets_users/js/typed.js" type="text/javascript"></script>
- -->
-<meta name="viewport" content="width=device-width,initial-scale=1">  
   <title>Ayo Berbudaya</title>
   <script>
     $(function(){
@@ -136,34 +126,6 @@ return false;
 
 //–>
 </SCRIPT>
-<script>
-    $(function(){
-      //Hanya Bisa di Style jika didepannya <p>
-        $("#typed").typed({
-            // strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
-            stringsElement: $('#typed-strings'),
-            typeSpeed: 30,
-            backDelay: 1000,
-            loop: false,
-            contentType: 'html', // or text
-            // defaults to false for infinite loop
-            loopCount: false,
-            callback: function(){ foo(); },
-            resetCallback: function() { newTyped(); }
-        });
-
-        $(".reset").click(function(){
-            $("#typed").typed('reset');
-        });
-
-    });
-
-    function newTyped(){ /* A new typed object */ }
-
-    function foo(){ console.log("Callback"); }
-
-    </script>
-
     <style>
         /* code for animated blinking cursor */
         .typed-cursor{
@@ -201,14 +163,6 @@ return false;
             100% { opacity:1; }
         }
     </style>
-<script>
-  /* Demo purposes only */
-  $(".hover").mouseleave(
-    function () {
-      $(this).removeClass("hover");
-    }
-  );
-</script>
 
 </head>
 <body>
@@ -259,7 +213,6 @@ return false;
           <li><a href="<?php echo site_url('user/c_forum');?>"><?php echo $this->topik;?></a></li>
           <li><a href="<?php echo site_url('user/c_berita');?>"><?php echo $this->berita;?></a></li>
           <li><a href="<?php echo site_url('user/c_artikel');?>"><?php echo $this->artikel;?></a></li>
-          <li><a href="<?php echo site_url('user/c_quiz');?>">Quiz</a></li>
           <li><a href="<?php echo site_url('user/c_map');?>">Map</a></li>
           <li><a href="#"><?php echo $this->bahasa;?> <span class="menu-arrow"><img src="<?php echo base_url();?>assets_users/img/keyboard53.png"></span></a>
                <ul>

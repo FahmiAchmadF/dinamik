@@ -12,7 +12,7 @@ class m_level extends CI_Model {
 					  ->where('id', $idsuer)
 					  ->get()
 					  ->result();
-		return $q
+		return $q;
 	}
 
 	function ambiltblevel() {
@@ -27,7 +27,7 @@ class m_level extends CI_Model {
 		$q = $this->db->select('*')
 					  ->from('tb_level')
 					  ->where('level', $level)
-					  ->get();
+					  ->get()
 					  ->result();
 		return $q;
 	}

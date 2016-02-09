@@ -91,9 +91,7 @@
             <hr class="style2">
           <br>
      <?php foreach ($data_artikel as $data):?>
-        <p class="content-sidebar-content">
-        <a href="<?php echo base_url();?>user/c_artikel/lihat_artikel/<?php echo $data->id_artikel;?>">
-          <?php echo $data->judul;?></a></p>
+        <p class="content-sidebar-content"><a href="#"><?php echo $data->judul;?></a></p>
           <hr class="style1">
        <?php endforeach;?>
       </div>
@@ -104,9 +102,7 @@
           <br>
         <?php foreach ($data_berita as $data):?>
           <div class="circle">12</div>
-          <p class="content-sidebar-content-2">
-          <a href="<?php echo base_url();?>user/c_berita/lihat_berita/<?php echo $data->id_berita;?>">
-            <?php echo $data->judul;?></a></p>
+          <p class="content-sidebar-content-2"><?php echo $data->judul;?></p>
             <hr class="style1">
        <?php endforeach;?>
       </div>

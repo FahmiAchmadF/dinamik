@@ -49,6 +49,7 @@ class c_topik extends CI_Controller
         );
 
         $this->load->view('Admin/v_topik', $data);
+        
     }
 
 }

@@ -10,14 +10,17 @@
 
 					
 					
-					echo "<table class='table table-hover'>
+					echo "<table id='tabel' class='table table-hover' >
+						<thead>
 						<tr>
 						<th>No</th>
 						<th>Level</th>
 						<th>Batas XP</th>
 						<th>Julukan</th>
 						<th colspan='2'> Aksi </th>
-						</tr>";
+						</tr>
+						</thead>
+						<tbody>";
 				 $no=1;
 					foreach($list as $a){
 						echo "
@@ -38,13 +41,23 @@
 						
 					$no++;		
 					}
-					echo "</table>";
+					echo "
+					</tbody>
+					</table>";
 					
-					echo $this->pagination->create_links();
 					?>
 			</div>
 
 		<div class="panel-footer"></div>
 	</div>
 
+
+	<!-- DATA TABES SCRIPT -->
+    <script src="<?php echo base_url();?>asset/datatables/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="<?php echo base_url();?>asset/datatables/dataTables.bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function () {
+        $("#tabel").DataTable();
+      });
+    </script>
 <?php include('include/footer.php');?>
