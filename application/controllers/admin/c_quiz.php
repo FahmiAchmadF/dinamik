@@ -27,7 +27,7 @@ class C_quiz extends CI_Controller {
 	}
 
 
-	private function cek()
+	private function cek()  
     {
 
         if ($this->cek_stat=="") 

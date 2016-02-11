@@ -18,7 +18,7 @@ class Auth {
     		echo "<script>alert('Anda tidak berhak mengakses halaman ini!');</script>";
     		redirect('dashboard');
     	}elseif ($this->hak=="") {
-    		echo "<script>alert('Anda belum login!');</script>";
+    		echo "<script>alert('Anda belum logiasan!');</script>";
     		redirect('login');
     	}else{
 

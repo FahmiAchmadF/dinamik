@@ -45,10 +45,10 @@
                 <td>".$data->tanggal."</td>
                 <td>".$data->status."</td>
                 <td>
-                <a href='".$url."c_topik/lihat_user/".$data->id."'>
+                <a href='".base_url()."c_topik/lihat_user/".$data->id."'>
                 <button title='Lihat' class='btn btn-default'><i class='fa fa-dot-circle-o'></i></button>
                 </a>
-                <a href='".$url."delete_user/".$data->id."'>
+                <a href='".base_url()."delete_user/".$data->id."'>
                 <button title='Hapus' class='btn btn-default'><i class='fa fa-trash-o'></i></button>
                 </a>   
                 </td>

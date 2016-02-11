@@ -21,378 +21,41 @@
     Do you like the following series?
   </p>
   <div class="answer">
-    <ul>
-      <li class="subquestion show">
-        <div class="label">Grey's Anatomy</div>
-        <div class="options js-resize-choices">
-          <label class="radio" style="clear:both;">
-            <input type="radio" name="yn-greys-anatomy" value="1" class="quiz-radio" >
-            <span>Yes</span>
-          </label>
-          <label class="radio" style="clear:both;">
-            <input type="radio" name="yn-greys-anatomy" value="2" class="quiz-radio" >
-            <span>Yes</span>
-          </label>        
-        </div>
-      </li>
-      <li class="subquestion show">
-        <div class="label">Desperate Housewives</div>
-        <div class="options js-resize-choices">
-          <label class="radio">
-            <input type="radio" name="yn-desperate-housewives" value="1" class="quiz-radio">
-            <span>Yes</span>
-          </label>
-          <label class="radio">
-            <input type="radio" name="yn-desperate-housewives" value="2" class="quiz-radio">
-            <span>No</span>
-          </label>          
-        </div>
-      </li>          
-      <li class="subquestion show">
-        <div class="label">Body of Proof</div>
-        <div class="options js-resize-choices">
-          <label class="radio">
-            <input type="radio" name="yn-body-of-proof" value="1" class="quiz-radio">
-            <span>Yes</span>
-          </label>
-          <label class="radio">
-            <input type="radio" name="yn-body-of-proof" value="2" class="quiz-radio">
-            <span>No</span>
-          </label>
-        </div>
-      </li>
-      <li class="subquestion show">
-        <div class="label">Modern Family</div>
-        <div class="options js-resize-choices">
-          <label class="radio">
-            <input type="radio" name="yn-modern-family" value="1" class="quiz-radio">
-            <span>Yes</span>
-          </label>
-          <label class="radio">
-            <input type="radio" name="yn-modern-family" value="2" class="quiz-radio">
-            <span>No</span>
-          </label>         
-        </div>
-      </li>
-      <li class="subquestion show">
-        <div class="label">Seaquest</div>
-        <div class="options js-resize-choices">
-          <label class="radio">
-            <input type="radio" name="yn-seaquest" value="1" class="quiz-radio">
-            <span>Yes</span>
-          </label>
-          <label class="radio">
-            <input type="radio" name="yn-seaquest" value="2" class="quiz-radio">
-            <span>No</span>
-          </label>       
-        </div>
-      </li>
-      <li class="subquestion show">
-        <div class="label">Parks and Recreation</div>
-        <div class="options js-resize-choices">
-          <label class="radio">
-            <input type="radio" name="yn-parks-and-recreation" value="1" class="quiz-radio">
-            <span>Yes</span>
-          </label>
-          <label class="radio">
-            <input type="radio" name="yn-parks-and-recreation" value="2" class="quiz-radio">
-            <span>No</span>
-          </label>        
-        </div>
-      </li>
-    </ul>     
+    <div id="hasil"></div>
+          <form method="post" id="quiz_form">
+            <?php $a=1;?>
+            <?php foreach ($soalsoal as $soal) { ?>
+
+              <div id="soal<?php echo $a?>" class="soal">
+                <h2 id="soal<?php echo $a?>"><?php echo $soal->soal;?></h2>
+                  <input type="radio" value="A" id='radioa_<?php echo $a;?>' name='jawaban<?php echo $a;?>'>
+                  <label id='jawabanatext<?php echo $a;?>' for='jawaban<?php echo $a;?>'><?php echo $soal->jawaban_texta;?></label>
+                  <br/>
+                  <input type="radio" value="B" id='radiob_<?php echo $a;?>' name='jawaban<?php echo $a;?>'>
+                  <label id='jawabanbtext<?php echo $a?>' for='jawaban<?php echo $a;?>'><?php echo $soal->jawaban_textb;?></label>
+                  <br/>
+                  <input type="radio" value="C" id='radioc_<?php echo $a;?>' name='jawaban<?php echo $a;?>'>
+                  <label id='jawabanctext<?php echo $a;?>' for='jawaban<?php echo $a;?>'><?php echo $soal->jawaban_textc;?></label>
+                  <br/>
+                  <input type="radio" value="D" id='radiod_<?php echo $a;?>' name='jawaban<?php echo $a;?>'>
+                  <label id='jawabandtext<?php echo $a?>' for='jawaban<?php echo $a;?>'><?php echo $soal->jawaban_textd;?></label>
+                  <br/>
+                  
+                  <input type="radio" checked='checked' value="Z" style='display:none' id='radioz_<?php echo $a;?>' name='jawaban<?php echo $a;?>'>
+                  
+                  <br/>
+                  <input type="button" id='next<?php echo $a;?>' value='Selanjutnya!' name='soal' class='butt'/>
+              </div>
+              <?php $a++;?>
+            <?php } ?>
+          </form>     
   </div> 
   <div class="actions">
     <a href="#" class="submit disabled" class="quiz">Submit</a>
   </div>
 </div>
 
-<div class="prescreener grid">
-  <p class="question-quiz">
-    When original episodes of the following primetime series air, how often in an average month do you watch the series?
-  </p>
-  <div class="answer">
-    <ul>
-      <li class="subquestion show">
-        <div class="label">Grey's Anatomy</div>
-        <div class="options js-resize-choices">
-          <label class="radio">
-            <input type="radio" name="greys-anatomy" value="1"class="quiz-radio">
-            <span>4 times a month</span>
-          </label>
-          <label class="radio">
-            <input type="radio" name="greys-anatomy" value="2" class="quiz-radio">
-            <span>3 times a month</span>
-          </label>
-          <label class="radio">
-            <input type="radio" name="greys-anatomy" value="3" class="quiz-radio">
-            <span>2 times a month</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="greys-anatomy" value="4" class="quiz-radio">
-            <span>1 times a month</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="greys-anatomy" value="5" class="quiz-radio">
-            <span>Less than once a month</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="greys-anatomy" value="6" class="quiz-radio">
-            <span>Used to watch but stopped</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="greys-anatomy" value="7" class="quiz-radio">
-            <span>Only have seen up to a few episodes</span>
-          </label>   
-          <label class="radio">
-            <input type="radio" name="greys-anatomy" value="8" class="quiz-radio">
-            <span>Never have seen this series</span>
-          </label>            
-        </div>
-      </li>
-      <li class="subquestion show">
-        <div class="label">Desperate Housewives</div>
-        <div class="options js-resize-choices">
-          <label class="radio">
-            <input type="radio" name="desperate-housewives" value="1" class="quiz-radio">
-            <span>4 times a month</span>
-          </label>
-          <label class="radio">
-            <input type="radio" name="desperate-housewives" value="2" class="quiz-radio">
-            <span>3 times a month</span>
-          </label>
-          <label class="radio">
-            <input type="radio" name="desperate-housewives" value="3" class="quiz-radio">
-            <span>2 times a month</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="desperate-housewives" value="4" class="quiz-radio">
-            <span>1 times a month</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="desperate-housewives" value="5" class="quiz-radio">
-            <span>Less than once a month</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="desperate-housewives" value="6" class="quiz-radio">
-            <span>Used to watch but stopped</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="desperate-housewives" value="7" class="quiz-radio">
-            <span>Only have seen up to a few episodes</span>
-          </label>   
-          <label class="radio">
-            <input type="radio" name="desperate-housewives" value="8" class="quiz-radio">
-            <span>Never have seen this series</span>
-          </label>            
-        </div>
-      </li>          
-      <li class="subquestion show">
-        <div class="label">Body of Proof</div>
-        <div class="options js-resize-choices">
-          <label class="radio">
-            <input type="radio" name="body-of-proof" value="1" class="quiz-radio">
-            <span>4 times a month</span>
-          </label>
-          <label class="radio">
-            <input type="radio" name="body-of-proof" value="2" class="quiz-radio">
-            <span>3 times a month</span>
-          </label>
-          <label class="radio">
-            <input type="radio" name="body-of-proof" value="3" class="quiz-radio">
-            <span>2 times a month</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="body-of-proof" value="4" class="quiz-radio">
-            <span>1 times a month</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="body-of-proof" value="5" class="quiz-radio">
-            <span>Less than once a month</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="body-of-proof" value="6" class="quiz-radio">
-            <span>Used to watch but stopped</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="body-of-proof" value="7" class="quiz-radio">
-            <span>Only have seen up to a few episodes</span>
-          </label>   
-          <label class="radio">
-            <input type="radio" name="body-of-proof" value="8" class="quiz-radio">
-            <span>Never have seen this series</span>
-          </label>            
-        </div>
-      </li>
-      <li class="subquestion show">
-        <div class="label">Modern Family</div>
-        <div class="options js-resize-choices">
-          <label class="radio">
-            <input type="radio" name="modern-family" value="1" class="quiz-radio">
-            <span>4 times a month</span>
-          </label>
-          <label class="radio">
-            <input type="radio" name="modern-family" value="2" class="quiz-radio">
-            <span>3 times a month</span>
-          </label>
-          <label class="radio">
-            <input type="radio" name="modern-family" value="3" class="quiz-radio">
-            <span>2 times a month</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="modern-family" value="4" class="quiz-radio">
-            <span>1 times a month</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="modern-family" value="5" class="quiz-radio">
-            <span>Less than once a month</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="modern-family" value="6" class="quiz-radio">
-            <span>Used to watch but stopped</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="modern-family" value="7" class="quiz-radio">
-            <span>Only have seen up to a few episodes</span>
-          </label>   
-          <label class="radio">
-            <input type="radio" name="modern-family" value="8" class="quiz-radio">
-            <span>Never have seen this series</span>
-          </label>            
-        </div>
-      </li>
-      <li class="subquestion show">
-        <div class="label">Seaquest</div>
-        <div class="options js-resize-choices">
-          <label class="radio">
-            <input type="radio" name="seaquest" value="1" class="quiz-radio">
-            <span>4 times a month</span>
-          </label>
-          <label class="radio">
-            <input type="radio" name="seaquest" value="2" class="quiz-radio">
-            <span>3 times a month</span>
-          </label>
-          <label class="radio">
-            <input type="radio" name="seaquest" value="3" class="quiz-radio">
-            <span>2 times a month</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="seaquest" value="4" class="quiz-radio">
-            <span>1 times a month</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="seaquest" value="5" class="quiz-radio">
-            <span>Less than once a month</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="seaquest" value="6" class="quiz-radio">
-            <span>Used to watch but stopped</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="seaquest" value="7" class="quiz-radio">
-            <span>Only have seen up to a few episodes</span>
-          </label>   
-          <label class="radio">
-            <input type="radio" name="seaquest" value="8" class="quiz-radio">
-            <span>Never have seen this series</span>
-          </label>            
-        </div>
-      </li>
-      <li class="subquestion show">
-        <div class="label">The A Team</div>
-        <div class="options js-resize-choices">
-          <label class="radio">
-            <input type="radio" name="a-team" value="1" class="quiz-radio">
-            <span>4 times a month</span>
-          </label>
-          <label class="radio">
-            <input type="radio" name="a-team" value="2" class="quiz-radio">
-            <span>3 times a month</span>
-          </label>
-          <label class="radio">
-            <input type="radio" name="a-team" value="3" class="quiz-radio">
-            <span>2 times a month</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="a-team" value="4" class="quiz-radio">
-            <span>1 times a month</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="a-team" value="5" class="quiz-radio">
-            <span>Less than once a month</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="a-team" value="6" class="quiz-radio">
-            <span>Used to watch but stopped</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="a-team" value="7" class="quiz-radio">
-            <span>Only have seen up to a few episodes</span>
-          </label>   
-          <label class="radio">
-            <input type="radio" name="a-team" value="8" class="quiz-radio">
-            <span>Never have seen this series</span>
-          </label>            
-        </div>
-      </li>
-      <li class="subquestion show">
-        <div class="label">Parks and Recreation</div>
-        <div class="options js-resize-choices">
-          <label class="radio">
-            <input type="radio" name="parks-and-recreation" value="1" class="quiz-radio">
-            <span>4 times a month</span>
-          </label>
-          <label class="radio">
-            <input type="radio" name="parks-and-recreation" value="2" class="quiz-radio">
-            <span>3 times a month</span>
-          </label>
-          <label class="radio">
-            <input type="radio" name="parks-and-recreation" value="3" class="quiz-radio">
-            <span>2 times a month</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="parks-and-recreation" value="4" class="quiz-radio">
-            <span>1 times a month</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="parks-and-recreation" value="5" class="quiz-radio">
-            <span>Less than once a month</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="parks-and-recreation" value="6" class="quiz-radio">
-            <span>Used to watch but stopped</span>
-          </label> 
-          <label class="radio">
-            <input type="radio" name="parks-and-recreation" value="7" class="quiz-radio">
-            <span>Only have seen up to a few episodes</span>
-          </label>   
-          <label class="radio">
-            <input type="radio" name="parks-and-recreation" value="8" class="quiz-radio">
-            <span>Never have seen this series</span>
-          </label>            
-        </div>
-      </li>
-    </ul>     
-  </div> 
-  <div class="actions cf">
-    <a href="#" class="submit disabled quiz">Submit</a>
-  </div>
-</div>
 
-<div class="prescreener">
-  <p class="question-quiz">
-    Score Yang Kamu Dapat
-  </p>
-  <div class="answer">
-    <div class="options">
-      <input type="text" pattern="[0-9]*" maxlength=3 class="num" placeholder="100"/>
-      <span class="error">Please use numeric characters 0-9</span>
-    </div>
-  </div>
-  <div class="actions">
-    <a href="#" class="submit disabled quiz">Next &#8594;</a>
-  </div>
-</div>
 
 
 
@@ -423,5 +86,59 @@
       </div>
     </div>
     <br>
+
+<script src="<?php echo base_url();?>asset/ckeditor/jquery/jQuery-2.1.4.min.js"></script>
+<script>
+$(document).ready(function(){
+  var steps = $('form').find(".soal");
+  var count = steps.size();
+  
+  steps.each(function(i){
+    
+    hider=i+2;
+    if (i == 0) {   
+        $("#soal" + hider).hide();
+        createNextButton(i);
+        }
+    else if(count==i+1){
+      var step=i + 1;
+      //$("#next"+step).attr('type','submit');
+            $("#next"+step).on('click',function(){
+
+         submit();
+
+            });
+      }
+    else{
+      $("#soal" + hider).hide();
+      createNextButton(i);
+    }
+
+  });
+    function submit(){
+      var id = <?php echo $idquiznya;?> 
+       $.ajax({
+            type: "POST",
+            url: "<?=base_url()?>user/c_quiz/quiz_ajax/"+id,
+            data: $('form').serialize(),
+            success: function(msg) {
+              $("#quiz_form").addClass("hide");
+              // alert(msg);
+              $('#hasil').show();
+              $('#hasil').append(msg);
+            }
+       });
+
+  }
+  function createNextButton(i){
+    var step = i + 1;
+    var step1 = i + 2;
+        $('#next'+step).on('click',function(){
+          $("#soal" + step).hide();
+          $("#soal" + step1).show();
+        });
+  }
+});
+</script>    
 </body>
 </html>
