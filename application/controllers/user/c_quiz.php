@@ -13,6 +13,8 @@ class C_quiz extends CI_Controller
         $this->gallery_path_url = base_url(). 'images/';
         $this->load->model('user/mod_index');
         $this->load->model('m_login');
+        $this->load->model('user/m_quiz');
+        $this->load->model('user/m_level');
 
         $session_login = $this->session->userdata('isLoginUser');
         if($session_login==True)
@@ -104,11 +106,14 @@ class C_quiz extends CI_Controller
     function index()
     {
         $this->link ='c_quiz';
+        $idquiz = 1;
         $data_artikel = $this->mod_index->data_artikel($this->bhs);
         $data_berita = $this->mod_index->data_berita($this->bhs);
         $data_topik = $this->mod_index->data_topik();
-        // var_dump($data_berita);
-        // exit();
+        $getidsoal = $this->m_quiz->ambilsoaldariquiz($idquiz);
+        $lang = $this->bhs;
+        $langlang = $this->m_quiz->ambilidlang($lang);
+
         $data = array(
         'user'=>$this->seson,
         'data_artikel'  =>$data_artikel,
@@ -116,6 +121,8 @@ class C_quiz extends CI_Controller
         'data_topik'  =>$data_topik,
         'tampil_kategori_forum'=>$this->tampil_kategori,
         'tampil_bahasa'=>$this->tampil_bahasa,
+        'soalsoal' => $this->m_quiz->inibarusoal($getidsoal, $langlang),
+        'idquiznya' => $idquiz
         );
 		$this->load->view('user/v_quiz', $data);
 	}
@@ -200,6 +207,87 @@ class C_quiz extends CI_Controller
         // $this->session->sess_destroy();
         $this->session->unset_userdata('isLoginUser');  
         redirect('user/index','refresh');
+    }
+
+    function quiz_ajax() {
+        $idquiz = $this->uri->segment(4);
+        $user = $this->seson;
+        $lang = $this->bhs;
+        $langlang = $this->m_quiz->ambilidlang($lang);
+
+        $iduser = $user['id'];
+
+        $getidsoal = $this->m_quiz->ambilsoaldariquiz($idquiz); 
+        $soal = $this->m_quiz->inibarusoal($getidsoal, $langlang);
+        
+        $i = 1;
+        $benar = 0;
+        $salah = 0;
+        $takterjawab = 0;
+        $xp = 0;
+
+        foreach ($soal as $jawabeuy) {
+            if($jawabeuy->jawaban == $_POST["jawaban".$i]){
+                $benar++;
+                $xp=$xp+$jawabeuy->xp;
+            }else if($_POST["jawaban".$i] == "Z"){
+                $takterjawab++;
+            }else{
+                $salah++;
+            }
+        $i++;   
+        }
+
+        // rumus matematika untuk lvling
+        $cek = $this->m_quiz->cek_disable($iduser, $idquiz);
+        if ($cek == 0) {
+            $lvl = $this->m_level->ambiluser($iduser);
+            $batasxp = $this->m_level->ambilbatasxp($lvl[0]->level);
+            $xpnya = $lvl[0]->xp + $xp;
+
+                if($xpnya == $batasxp){
+                    $lvlnya = $lvl[0]->level + 1;
+                    $this->m_level->lvlup($iduser, $lvlnya);
+
+                }else if($xpnya < $batasxp){
+                    $xpnya;
+                    $this->m_level->dapetxp($iduser, $xpnya);
+
+                }else if($xpnya > $batasxpnya){
+                    $lvlnya = $lvl[0]->level + 1;
+                    $realxp = $xpnya - $batasxp;
+                    $this->m_level->levelup($iduser, $lvlnya, $realxp);
+                }
+
+            $this->m_quiz->tb_disable($iduser, $idquiz);
+            
+            echo "<div id='hasil'>";
+
+             echo " Jawaban Benar  : <span class='highlight'>". $benar."</span><br>";
+
+             echo " Jawaban Salah  : <span class='highlight'>". $salah."</span><br>";
+
+             echo " Tidak Terjawab  : <span class='highlight'>". $takterjawab."</span><br>";
+
+             echo " XP Yang Diperoleh : ". $xp ." ";
+
+            echo "</div>";
+
+        } else if($cek > 0) {
+
+        echo "<div id='hasil'>";
+
+         echo " Jawaban Benar  : <span class='highlight'>". $benar."</span><br>";
+
+         echo " Jawaban Salah  : <span class='highlight'>". $salah."</span><br>";
+
+         echo " Tidak Terjawab  : <span class='highlight'>". $takterjawab."</span><br>";
+
+         echo " XP Yang Diperoleh : ". $xp ." ";
+
+        echo "</div>";
+        }
+        
     }
 }
 
