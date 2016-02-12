@@ -31,7 +31,6 @@
 					}
 					echo "</table>";
 					
-					echo $this->pagination->create_links();
 					?>
 			</div>
 

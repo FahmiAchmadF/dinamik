@@ -78,6 +78,21 @@ public function ambilsoaldariquiz($idquiz) {
 			return $q->id;
 		}
 
+		function lihatdaftarquiz(){
+		$this->db->select('*');
+		$this->db->from('tb_quiz');
+			$this->db->join('tb_quiz_language', 'tb_quiz.id = tb_quiz_language.id_quiz');
+				$this->db->join('tb_kategori_quiz', 'tb_kategori_quiz.id = tb_quiz_language.id_kategori_quiz');
+		$query = $this->db->get();
+		
+		return $query->result();
+		}
+
+		function jumlah($namatabel){
+			return $this->db->get($namatabel)->num_rows();
+		}
+
+
 		
 
 	}

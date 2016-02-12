@@ -309,59 +309,21 @@ serta memiliki potensi pariwisata dan budaya yang sangat kaya.</p>
 <div class="spacer">
   <div class="container">
   <center>
-        <p class="jawabarat-index">Artikel Dan Kuis Jawa Barat</p>
+        <p class="jawabarat-index">Artikel Khusus Provinsi Jawa Barat</p>
     <div class="line-jawabarat"></div>
   </center>
     <div class="snipresponsive wow fadeInDown">
+<?php foreach($data_artikel as $data) {?>    
 <figure class="snip1158 red wow bounceInLeft">
-  <img src="<?php echo base_url();?>assets_users/img/jaipongan.jpg" alt="sample21"/>
+  <img src="<?php echo base_url();?>images/<?php echo $data->cover;?>" alt="gal"/>
   <figcaption>
-    <h2>Tari Golek Menak</h2>
-    <span>Tarian</span>
+    <h2><?php echo $data->judul; ?></h2>
+    <span><?php echo $data->isi; ?></span>
   </figcaption>
-  <a href="#"></a>
+  <a href="<?php echo base_url();?>user/c_artikel/lihat_artikel/<?php echo $data->id_artikel;?>"></a>
 </figure>
-<figure class="snip1158 yellow wow fadeInDown">
-  <img src="<?php echo base_url();?>assets_users/img/jaipongan.jpg" alt="sample68"/>
-  <figcaption>
-    <h2>Tari Golek Menak</h2>
-    <span>Tarian</span>
-  </figcaption>
-  <a href="#"></a>
-</figure>
-<figure class="snip1158 blue wow bounceInRight">
-  <img src="<?php echo base_url();?>assets_users/img/jaipongan.jpg" alt="sample17"/>
-  <figcaption>
-    <h2>Tari Golek Menak</h2>
-    <span>Tarian</span>
-  </figcaption>
-  <a href="#"></a>
-</figure>
-<br>
-<figure class="snip1158 red wow bounceInLeft">
-  <img src="<?php echo base_url();?>assets_users/img/jaipongan.jpg" alt="sample21"/>
-  <figcaption>
-    <h2>Tari Golek Menak</h2>
-    <span>Tarian</span>
-  </figcaption>
-  <a href="#"></a>
-</figure>
-<figure class="snip1158 yellow wow fadeInDown">
-  <img src="<?php echo base_url();?>assets_users/img/jaipongan.jpg" alt="sample68"/>
-  <figcaption>
-    <h2>Tari Golek Menak</h2>
-    <span>Tarian</span>
-  </figcaption>
-  <a href="#"></a>
-</figure>
-<figure class="snip1158 blue wow bounceInRight" style="margin-bottom:70px;">
-  <img src="<?php echo base_url();?>assets_users/img/jaipongan.jpg" alt="sample17"/>
-  <figcaption>
-    <h2>Tari Golek Menak</h2>
-    <span>Tarian</span>
-  </figcaption>
-  <a href="#"></a>
-</figure>
+<?php } ?>
+
 </center>
 </div>
   </div>

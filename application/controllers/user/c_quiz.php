@@ -103,8 +103,10 @@ class C_quiz extends CI_Controller
         }
     }
 
-    function index()
+    function jawab()
     {
+        $idquiz = $this->uri->segment(4);
+
         $this->link ='c_quiz';
         $idquiz = 1;
         $data_artikel = $this->mod_index->data_artikel($this->bhs);
@@ -126,6 +128,20 @@ class C_quiz extends CI_Controller
         );
 		$this->load->view('user/v_quiz', $data);
 	}
+
+    public function index() {
+                
+        
+        $dari = $this->uri->segment(4);
+        $data = array(
+            'kategori' => $this->m_quiz->lihatdaftarquiz(),
+            'user' => $this->seson
+            );
+
+
+        $this->load->view('user/v_daftarquiz', $data);
+    }
+
     function edit_profile()
     {
         $this->link ='index';
