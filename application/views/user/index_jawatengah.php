@@ -10,7 +10,7 @@
       <div class="container">
         <div class="row">
           <div class="services-web text-center">
-            <div class="col-md-4">
+            <div class="col-md-4 col-lg-4">
               &nbsp;<img src="<?php echo base_url();?>assets_users/img/tribe.png">
               <br><br>
               <h4>Suku</h4>
@@ -21,7 +21,7 @@
           
           
           <div class="services-dev text-center">
-            <div class="col-md-4">
+            <div class="col-md-4 col-lg-4">
               &nbsp;<img src="<?php echo base_url();?>assets_users/img/culture.png">
               <br><br>
               <h4>Kebudayaan</h4>
@@ -32,7 +32,7 @@
           
           
           <div class="services-sup text-center">
-            <div class="col-md-4">
+            <div class="col-md-4 col-lg-4">
               &nbsp;<img src="<?php echo base_url();?>assets_users/img/star-512.png">
               <br><br>
               <h4>Keistimewaan</h4>
@@ -202,7 +202,8 @@
 </center>
 </div>
 </center>
-<footer class="site-footer" style="margin-bottom:-50px;">
+<img src="<?php echo base_url();?>assets_users/img/footer-jawa-tengah.png" width="100%" style="margin-top:20px">
+<footer class="site-footer" style="margin-bottom:-50px;border:1px #ab7c50 solid;">
   &copy; Copyright Logic (2015/2016)
 </footer>
 <div>

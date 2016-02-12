@@ -58,8 +58,8 @@
 </center>
 </div>
 </div>
-
-<footer class="site-footer" style="margin-bottom:-50px;">
+<img src="<?php echo base_url();?>assets_users/img/yogya-footer.png" width="100%" style="margin-top:20px">
+<footer class="site-footer" style="margin-bottom:-50px;background-color:#ed184e;">
   &copy; Copyright Logic (2015/2016)
 </footer>
 <div>

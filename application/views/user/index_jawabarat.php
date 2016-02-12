@@ -328,7 +328,8 @@ serta memiliki potensi pariwisata dan budaya yang sangat kaya.</p>
 </div>
   </div>
 </div>
-<footer class="site-footer" style="margin-bottom:-50px;">
+<img src="<?php echo base_url();?>assets_users/img/footer-jawabarat.png" width="100%" style="margin-top:20px">
+<footer class="site-footer" style="margin-bottom:-50px;border:1px #ab7c50 solid;">
   &copy; Copyright Logic (2015/2016)
 </footer>
 <div>

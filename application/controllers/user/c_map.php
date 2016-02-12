@@ -106,7 +106,7 @@ class C_map extends CI_Controller
             $id_bahasa = $data->id_language;
             $provinsi = $data->provinsi;
         }
-        // var_dump($provinsi);
+        // var_dump($id_provinsi);
         // exit();
 
         $data_bahasa = $this->m_map->bahasa($id_bahasa);
@@ -117,8 +117,7 @@ class C_map extends CI_Controller
 
         $this->tampil_bahasa_where = $this->m_map->bahasa_where($bahasa);
         $this->link ='c_map/provinsi';
-        // var_dump($provinsi);
-        // exit(); 
+
         if($provinsi =='Daerah Istimewa Yogyakarta')
         {
             $data_artikel = $this->mod_index->data_artikel($this->bhs);

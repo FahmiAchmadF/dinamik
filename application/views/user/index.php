@@ -127,6 +127,8 @@
         </div>
       </form>
       <p class="or"><a href="#popup12" class="effect-underline"><?php echo $this->signup;?></a><p>
+      <p class="or"><a href="#popup123" class="effect-underline">Lupa Password?</a><p>
+
 </div>
 </div>
 <!---Form Register-->
@@ -159,5 +161,45 @@
       </form>
       <p class="or"><a href="#popup1" class="effect-underline"><?php echo $this->login;?></a><p>
     </div>
+   <div style="clear: both;"></div>​
+  <div id="popup123" class="overlay">
+    <div class="tenth-login" style="margin-top:150px">
+    <a href="#" class="close-button">&#10006;</a>   
+      <h4 class="login">Lupa Password?</h4>
+      <form class="ten">
+         <a class="close" href="#">&times;</a>
+        <li class="cream">
+          <input type="text" class="text" placeholder="E-Mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" ><a href="#" class=" icon10 email-user"></a>
+        </li>
+        <li class="cream">
+          <input type="text" class="text" placeholder="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" ><a href="#" class=" icon10 user10"></a>
+        </li>
+        <div class="submit-ten">
+          <input type="submit" onclick="myFunction()" value="Kirim" > 
+        </div>
+      </form>
+      <p class="or"><a href="#popup1" class="effect-underline">Masuk</a><p>
+</div>
+<div>
+  <script src="<?php echo base_url();?>assets/users/dist/wow.js"></script>
+  <script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+    wow.init();
+    document.getElementById('moar').onclick = function() {
+      var section = document.createElement('section');
+      section.className = 'section--purple wow fadeInDown';
+      this.parentNode.insertBefore(section, this);
+    };
+  </script>
+</body>
+</html>
 </body>
 </html>
