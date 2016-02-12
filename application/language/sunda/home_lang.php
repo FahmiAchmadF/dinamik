@@ -27,7 +27,7 @@
 		Kalawan Barobah kaayaan Jalmi anu Elmuan Ngeunaan Budaya Urang Atos Tiasa Barobah kaayaan Wargi Nagara anu <br>
  		Tiasa Ngajenan  sarta Ngajenan Yen Pentingna Budaya Kanggo Hiji Nagara.';
 	$lang['text_artikel'] = 'Artikel'; 
-    $lang['text_artikel_dan_kuis'] = "Artikel sarta Kuis";
+    $lang['text_artikel_dan_kuis'] = "Artikel";
 	$lang['text_bawah_1'] = 'Anjeun Kedah Ngarasakeun Budaya Kanggo Nyurtian na';
 	$lang['text_bawah_2'] = "Hayu Mimiti Ngagabung Ayeuna Oge Kanggo Tiasa Meunangkeun Saniskanten Akses Di Website ieu Sepertos :";
 	$lang['text_selengkapnya'] = 'Salengkepna..';	

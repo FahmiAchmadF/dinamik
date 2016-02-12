@@ -25,7 +25,7 @@
 Awareness Budaya-budaya ing Indonesia.';
 	$lang['text_konten_3'] = 'Ngagem Dadi pinter babagan Budaya Kita Iku Apa Aja
 Warga bisa Maringi hadiah lan Respecting Pentinge Budaya iku Kanggo Negara Sing Bagean .';
-	 $lang['text_artikel_dan_kuis'] = "Artikel dan Kuis";
+	 $lang['text_artikel_dan_kuis'] = "Artikel";
 	$lang['text_bawah_1'] = 'Apa Sampeyan Aran Budaya Mangertos';
 	$lang['text_bawah_2'] = 'Ayo dadi miwiti Join Now Uga Kanggo bisa njaluk Akses Kabeh Ing situs iki Minangka :';
 	$lang['text_selengkapnya'] = 'Info liyane..';	

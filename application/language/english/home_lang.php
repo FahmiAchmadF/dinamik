@@ -25,7 +25,7 @@
 	Culture-Cultural Knowledge of in Indonesia';
 	$lang['text_konten_3'] = 'Being People with Culture We Are Knowledgeable About Can Become a<br>
 	  Citizen Can Appreciate and Respect That For A State Cultural Importance.';
-    $lang['text_artikel_dan_kuis'] = "Article and Quiz";
+    $lang['text_artikel_dan_kuis'] = "Article";
 	$lang['text_bawah_1'] = 'You Should Feel the culture to understand';
 	$lang['text_bawah_2'] = "Let's Start Join Now Also For Can Get All Access In this Website As :";
 	$lang['text_selengkapnya'] = 'More..';	

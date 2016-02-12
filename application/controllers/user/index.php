@@ -101,7 +101,7 @@ class Index extends CI_Controller
         'user'=>$this->seson,
         'data_artikel'  =>$data_artikel,
         'data_berita'  =>$data_berita,
-        'data_topik'  =>$data_topik,
+        'data_topik'  =>$data_topik, 
         'tampil_kategori_forum'=>$this->tampil_kategori,
         'tampil_bahasa'=>$this->tampil_bahasa,
         );

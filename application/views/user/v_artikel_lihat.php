@@ -111,12 +111,14 @@
        <?php endforeach;?>
       </div>
       <div class="content-sidebar" style="margin-top:10px;white-space: nowrap;">
-        <p class="content-sidebar-title"><?php echo $this->berita_forum;?></p>
+        <p class="content-sidebar-title">
+            <?php echo $this->berita_forum;?>
+        </p>
           <br>
             <hr class="style2">
           <br>
         <?php foreach ($data_berita as $data):?>
-          <div class="circle">12</div>
+          
           <p class="content-sidebar-content-2">
             <a href="<?php echo base_url();?>user/c_berita/lihat_berita/<?php echo $data->id_berita;?>">
               <?php echo $data->judul;?>

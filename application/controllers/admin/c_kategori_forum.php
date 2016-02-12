@@ -4,7 +4,7 @@ class C_kategori_forum extends CI_Controller
     var $gallery_path;
     var $gallery_path_url;
 	public function __Construct()
-  	{
+  	{ 
     	parent::__construct();
     	$this->load->model('admin/m_kategori_forum');
     	$this->load->model('m_login');

@@ -25,7 +25,7 @@
 	 Pengetahuan Tentang Budaya-Budaya Di Indonesia.';
 	$lang['text_konten_3'] = 'Dengan Menjadi Orang yang Berpengetahuan Tentang Budaya Kita Sudah Bisa Menjadi<br>
 	 Warga Negara yang Bisa Menghargai dan Menghormati Bahwa Pentingnya Budaya Bagi<br> Suatu Negara.';
-	 $lang['text_artikel_dan_kuis'] = "Artikel dan Kuis";
+	 $lang['text_artikel_dan_kuis'] = "Artikel";
 	$lang['text_bawah_1'] = 'Kamu Harus Merasakan Budaya Untuk Memahaminya';
 	$lang['text_bawah_2'] = 'Ayo Mulai Bergabung Sekarang Juga Untuk Bisa Mendapatkan Segala Akses Di Website ini Seperti :';
 	$lang['text_selengkapnya'] = 'Selengkapnya..';	

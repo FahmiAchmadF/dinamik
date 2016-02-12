@@ -1,10 +1,12 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Login extends CI_Controller{
+    
     function __construct()
     {
         parent::__construct();
         $this->load->model('m_login'); //memasukkan file model m_login.php ke dalam controller
     }
+
     function index()
     {
         $session = $this->session->userdata('isLogin'); //mengabil dari session apakah sudah login atau belum
@@ -13,9 +15,10 @@ class Login extends CI_Controller{
             $this->load->view('login_form');
         }else //jika session true maka di redirect ke halaman dashboard
         {
-            redirect('dashboard/index_admin');
+            redirect('dashboard/index');
         }
     }
+
     function do_login()
     {
         $username = $this->input->post("username");
@@ -33,7 +36,7 @@ class Login extends CI_Controller{
                 'username'  => $username, //set session username
                 'sts_admin'      => $hak, //set session hak akses
             ));               
-            redirect('dashboard/index_admin','refresh');  //redirect ke halaman dashboard
+            redirect('dashboard/index','refresh');  //redirect ke halaman dashboard
         }
         else{ //jika data tidak ada yng sama dengan database
             echo" <script>

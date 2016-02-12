@@ -44,38 +44,21 @@
     </p>
   </div>
  <br><br><br>
-<div class='container-introduction'>
- <?php foreach ($data_artikel as $data):?>  
-  <div class='col4'>
-    <div class='image-introduction'>
-      <img alt='' height='213' src='<?php echo base_url();?>images/<?php echo $data->cover;?>' width='320'>
-    </div>
-    <div class='copy'>
-    <a href="<?php echo base_url();?>user/c_artikel/lihat_artikel/<?php echo $data->id_artikel;?>">
-      <h3 class="title-introduction"><?php echo $data->judul;?></h3>
-      <p><?php echo $data->isi;?>.</p>
-    </a>
-    </div>
-    <div class='clear'></div>
-  </div>
-<?php endforeach;?>
-
-
-</div>
+<hr>
 </center>
 <p class="title_coloum" align="center" style="margin-top:50px;"><?php echo $this->artikel_kuis;?> </p>
  <div id="buttons" style="margin-top:50px;">
   <div class="butWrap">
 
- <?php foreach ($data_topik as $data):?>
-    <div class="butFrame" onclick="window.location='#'"><img src="<?php echo base_url();?>assets_users/img/jaipongan.jpg" />
+ <?php foreach ($data_artikel as $data):?>
+    <div class="butFrame" onclick="window.location='<?php echo base_url();?>user/c_artikel/lihat_artikel/<?php echo $data->id_artikel;?>'"><img src="<?php echo base_url();?>images/<?php echo $data->cover;?>" />
       <div class="butTextWrap">
         <div class="butHeading"><?php echo $data->judul;?>
           <br />
           <br />
           <div class="butText"><?php echo $data->isi;?></div>
         </div>
-        <p>Pelajari Selengkapnya...</p>
+        <p>Baca...</p>
       </div>
     </div>
   <?php endforeach;?>

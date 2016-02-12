@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>asset/css/ionicons.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>asset/css/_all-skins.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>asset/css/select2.min.css">
+  <script src="<?php echo base_url();?>asset/ckeditor/jquery/jQuery-2.1.4.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>asset/font-awesome-4.5.0/css/font-awesome.min.css">
       <!-- DATA TABLES -->
     <link href="<?php echo base_url();?>asset/plugins/datatables/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />

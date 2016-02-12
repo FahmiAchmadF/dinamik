@@ -36,7 +36,7 @@ class m_level extends CI_Model {
 		$q = $this->db->select_max('level')
 					  ->from('tb_level')
 					  ->get()
-		$q = $q->result();
+					  ->result();
 		return $q[0]->level;
 	}
 
