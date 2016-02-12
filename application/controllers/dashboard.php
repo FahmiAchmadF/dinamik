@@ -15,42 +15,42 @@ class Dashboard extends CI_Controller{
         $this->tampil_kategori = $this->mod_index->tampil_kategori_forum();
 	}
     
-	function index_user()
-	{
-		$this->auth->cek_auth_user(); //ngambil auth dari library
-		$session = $this->session->userdata('isLoginUser');
-        if($session==True)
-        {
-            $ambil_akun = $this->m_login->ambil_member($this->session->userdata('username_user'));    
-        }
-        else
-        {
-            $username='';
-            $ambil_akun = $this->m_login->ambil_member($username);
-        }
+	// function index_user()
+	// {
+	// 	$this->auth->cek_auth_user(); //ngambil auth dari library
+	// 	$session = $this->session->userdata('isLoginUser');
+ //        if($session==True)
+ //        {
+ //            $ambil_akun = $this->m_login->ambil_member($this->session->userdata('username_user'));    
+ //        }
+ //        else
+ //        {
+ //            $username='';
+ //            $ambil_akun = $this->m_login->ambil_member($username);
+ //        }
 	        
-		$stat_user = $this->session->userdata('sts_user');
-		// var_dump($ambil_akun);
-		// exit();
-		if($stat_user=='user')
-		{//admin
-			$data = array(
-            	'user'=>$ambil_akun,
-                'tampil_kategori_forum' =>$this->tampil_kategori
-            );
-            // redirect('user/index');
-            $this->load->view('user/index', $data);
-		}
-		else
-		{ 
-            echo" <script>
-                    alert('Harap Login Terlebih Dahulu');
-                  </script>";    
-            redirect('user/index','refresh');
-	  	}
-	}
+	// 	$stat_user = $this->session->userdata('sts_user');
+	// 	// var_dump($ambil_akun);
+	// 	// exit();
+	// 	if($stat_user=='user')
+	// 	{//admin
+	// 		$data = array(
+ //            	'user'=>$ambil_akun,
+ //                'tampil_kategori_forum' =>$this->tampil_kategori
+ //            );
+ //            // redirect('user/index');
+ //            $this->load->view('user/index', $data);
+	// 	}
+	// 	else
+	// 	{ 
+ //            echo" <script>
+ //                    alert('Harap Login Terlebih Dahulu');
+ //                  </script>";    
+ //            redirect('user/index','refresh');
+	//   	}
+	// }
 
-	function index_admin()
+	function index()
 	{
 		$this->auth_admin->cek_auth(); //ngambil auth dari library
 		$session = $this->session->userdata('isLogin');

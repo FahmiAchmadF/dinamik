@@ -36,10 +36,8 @@ class m_kategori_quiz extends CI_Model{
         $data = array(
             'kategori_quiz' => $this->input->post('kategori_quiz')
             );
-
             $exe = $this->db->where('id', $id);
             $exe = $this->db->update('tb_kategori_quiz', $data);
-
         return true;
     }
 

@@ -5,7 +5,7 @@
     </div>
     <div class="panel-body">
     <h2> <a href="<?php echo base_url();?>admin/c_bahasa/tambah_bahasa" class="btn btn-success">Tambah</a> </h2>
-        <table id="example" class="table table-striped responsive-utilities jambo_table">
+        <table id="example1" class="table table-bordered table-striped">
             <thead>
                 <th>No </th>
                 <th>ID</th>
@@ -50,5 +50,4 @@
     </div>
     <div class="panel-footer">
     </div>
-    
 <?php include('include/footer.php');?>

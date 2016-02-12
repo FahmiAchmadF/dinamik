@@ -20,7 +20,7 @@
                     <input type="text" name="username" placeholder="Username" required class="form-control input-lg" /><?php echo form_error('username');?>
                     <input type="password" name="password" placeholder="Password" required class="form-control input-lg" /><?php echo form_error('password');?>
                     <button type="submit" name="login" class="btn btn-lg btn-primary btn-block">Masuk</button>
-                    <!-- <a href="<?php echo base_url();?>daftar_guru/add"><p name="daftar" class="btn btn-lg btn-primary btn-block">Daftar Guru</p></a> -->
+                     <a href="<?php echo base_url();?>admin/c_lupa_password"><p name="daftar" class="btn btn-lg btn-primary btn-block">Lupa Password </p></a> 
                 </form>
                 <div class="form-links">
                 </div>

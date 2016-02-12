@@ -79,7 +79,7 @@
           <ul class="sidebar-menu">
             <li class="header">MENU</li>
             <li class="treeview">
-              <a href="<?php echo base_url();?>admin/dashboard">
+              <a href="<?php echo base_url();?>dashboard">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span>
               </a>
             </li>

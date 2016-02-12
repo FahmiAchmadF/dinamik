@@ -5,7 +5,7 @@
     </div>
     <div class="panel-body">
     <h2> <a href="<?php echo base_url();?>admin/c_kategori_forum/tambah_kategori_forum" class="btn btn-success">Tambah</a> </h2>
-        <table id="example" class="table table-striped responsive-utilities jambo_table">
+        <table id="example1" class="table table-bordered table-striped">
                 <thead>
                     <th>No </th>
                     <th>Kategori</th>

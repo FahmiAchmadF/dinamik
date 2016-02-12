@@ -292,8 +292,11 @@ $(document).ready(function(e) {
                 <p class="welcome-jawatengah">Rahajeng Rawuh</p><br>
                 <Span class="location">Jawa Tengah</Span><br>
         <Span class="location-city">Ibu Kota Semarang</Span><br>
-<div id="button" class="android-btn btn-responsive" ><span class="button-in">Masuk</span></div>
-<a class="close-reveal-modal" style="position:static;"><div id="button2" class="android-btn ink"><span class="button-in">Batal</span></div></a>
+<div id="button" class="android-btn btn-responsive" ><span class="button-in">
+<a href="<?php echo base_url();?>user/bahasa/session_bahasa_provinsi/?kode_provinsi=3&link=<?php echo $this->link;?>">
+Masuk</a></span></div>
+<a class="close-reveal-modal" style="position:static;">
+<div id="button2" class="android-btn ink"><span class="button-in">Batal</span></div></a>
 </center>
                 </div>
  </div>

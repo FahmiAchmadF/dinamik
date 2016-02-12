@@ -106,6 +106,8 @@ class C_map extends CI_Controller
             $id_bahasa = $data->id_language;
             $provinsi = $data->provinsi;
         }
+        // var_dump($provinsi);
+        // exit();
 
         $data_bahasa = $this->m_map->bahasa($id_bahasa);
         foreach ($data_bahasa as $data)
@@ -117,7 +119,7 @@ class C_map extends CI_Controller
         $this->link ='c_map/provinsi';
         // var_dump($provinsi);
         // exit(); 
-        if($provinsi =='Yogyakarta')
+        if($provinsi =='Daerah Istimewa Yogyakarta')
         {
             $data_artikel = $this->mod_index->data_artikel($this->bhs);
             $data_berita = $this->mod_index->data_berita($this->bhs);
@@ -148,6 +150,22 @@ class C_map extends CI_Controller
             'provinsi'  =>$provinsi,
             );
             $this->load->view('user/index_jawabarat', $data);
+        }
+        elseif ($provinsi=='Jawa Tengah') 
+        {
+            $data_artikel = $this->mod_index->data_artikel($this->bhs);
+            $data_berita = $this->mod_index->data_berita($this->bhs);
+            $data_topik = $this->mod_index->data_topik();
+            $data = array(
+            'user'=>$this->seson,
+            'data_artikel'  =>$data_artikel,
+            'data_berita'  =>$data_berita,
+            'data_topik'  =>$data_topik,
+            'tampil_kategori_forum'=>$this->tampil_kategori,
+            'tampil_bahasa_where'=>$this->tampil_bahasa_where,
+            'provinsi'  =>$provinsi,
+            );
+            $this->load->view('user/index_jawatengah', $data);
         }
 
     }

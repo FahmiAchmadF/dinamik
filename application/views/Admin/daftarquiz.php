@@ -3,15 +3,11 @@
 
 	<div class="panel panel-default">
 		<div class="panel-heading"><strong>Daftar Quiz</strong></div>
-
 			<div class="panel-body">
 				<h2> <a href="<?php echo base_url();?>admin/c_quiz/tambahquiz" class="btn btn-success">Tambah</a> </h2>
-	
-					<?php
-
-					
-					
-					echo "<table class='table table-hover'>
+					<?php		
+					echo "
+						<table id='example1' class='table table-bordered table-striped'>
 						<tr>
 						<th>No</th>
 						<th>Judul</th>

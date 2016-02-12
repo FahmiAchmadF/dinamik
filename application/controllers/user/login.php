@@ -12,8 +12,7 @@ class Login extends CI_Controller{
         if($session == FALSE) //jika session false maka akan menampilkan halaman login
         {
             $this->load->view('user/user_login');
-            // redirect('dashboard/index_user');
-        }else //jika session true maka di redirect ke halaman dashboard
+        }else 
         {
             $this->load->view('user/index');
         }
@@ -23,7 +22,7 @@ class Login extends CI_Controller{
     {
         $username = $this->input->post("username");
         $password = $this->input->post("password");
-        $status_user='1';
+        $status_user='0';
         $cek = $this->m_login->cek_user($username,$password,$status_user); //melakukan persamaan data dengan database
         // var_dump($cek);
         // exit();

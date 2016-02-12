@@ -159,13 +159,13 @@
           <input type="text" name="username" onKeyPress="return hurufangka(this, event)" maxlength="30" class="text" placeholder="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" ><span class=" icon10 user10"> </span>
         </li>
         <li class="cream">
-          <input type="text" name="email" onKeyPress="return hurufangka(this, event)" maxlength="30" class="text" placeholder="E-Mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" ><span class=" icon10 user10"></span>
+          <input type="text" name="email" maxlength="30" class="text" placeholder="E-Mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" ><span class=" icon10 user10"></span>
         </li>
 <!--         <li class="cream">
           <input type="text" name="nama" class="text" placeholder="Nama" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nama';}" ><a href="#" class=" icon10 user10"></a>
         </li> -->
         <li class="cream">
-          <input type="password" placeholder="Password" onKeyPress="return hurufangka(this, event)" maxlength="30" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"><a href="#" class=" icon10 lock10"></a>
+          <input type="password" placeholder="Password" onKeyPress="return hurufangka(this, event)" name="password" maxlength="30" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"><a href="#" class=" icon10 lock10"></a>
         </li>
 <!--         <li class="cream">
           <input type="password" placeholder="Ulangi-Password" onKeyPress="return hurufangka(this, event)" maxlength="30" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"><a href="#" class=" icon10 lock10"></a>
