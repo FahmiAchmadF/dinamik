@@ -58,9 +58,23 @@ Warga bisa Maringi hadiah lan Respecting Pentinge Budaya iku Kanggo Negara Sing 
 
 	//index per provinsi
 	//jawa
-	$lang['jawa_selamat_datang'] = 'Selamat Datang';
+	$lang['jawa_selamat_datang'] = 'Selamat Datang Daerah Istimewa Yogyakarta';
 	$lang['jawa_text1'] = 'Kantor Pariwisata Yogyakarta wis éling sesanti lan misi saka Yogyakarta minangka wilayah
 	 Wisata budaya basis sing gumantung ing kekuatan lan kaunggulan saka budaya lokal<br>
 	 lan bisa dadi lokomotif pembangunan saka Daerah Istimewa Yogyakarta
 	 minangka wutuh..';
+
+
+	  //index per Provinsi
+	//jawa jawa tengah
+	$lang['jateng_1'] = 'Jawa Tengah';
+	$lang['jateng_2'] = 'Jawa Tengah iku sawijining provinsi ing pundi kathah budaya Jawa dikembangaké kene amarga akeh karajan Jawa Tengah biyen ngadeg kene iki katon saka macem-macem kuil warisan ing Jawa Tengah';
+	$lang['jateng_3'] = 'Suku';
+	$lang['jateng_4'] = 'Kebudayaan';
+	$lang['jateng_5'] = 'Fitur sing';
+	$lang['jateng_6'] = 'Mayoritas wong ing Jawa Tengah iku sawijining suku Jawa.Jawa Tengah dikenal minangka pusat budaya Jawa';
+	$lang['jateng_7'] = 'Jawa seni lan budaya sing unik. Wayang lan Batik punika seni Jawa Tengah kang saiki dikenal ing macem-macem negara manca lan malah donya';
+	$lang['jateng_8'] = 'Jawa Tengah dikenal minangka "atimu" budaya Jawa';
+	$lang['jateng_9'] = 'Jawa Tengah iku sawijining provinsi ing pundi kathah budaya Jawa dikembangaké kene amarga akeh karajan Jawa Tengah biyen ngadeg kene iki katon saka macem-macem kuil warisan ing Jawa Tengah';
+
 ?>

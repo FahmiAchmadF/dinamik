@@ -55,13 +55,19 @@ class Bahasa extends CI_Controller{
         $bahasa=$_GET['bahasa'];
         $link=$_GET['link'];
         $provinsi=$_GET['provinsi'];
-        // var_dump($provinsi);
+        $data_provinsi = $this->m_map->cari_id($provinsi);
+        foreach ($data_provinsi as $data)
+        {
+            $id = $data->id;
+        }
+        // var_dump($id);
         // exit();
+
             $this->session->set_userdata(array(
                 'bahasa'   => TRUE, //set data telah login
                 'language'  => $bahasa, //set session username
             ));               
 
-            redirect('user/'.$link.'/'.$provinsi.' ','refresh');
+            redirect('user/'.$link.'/'.$id.' ','refresh');
     }
 }

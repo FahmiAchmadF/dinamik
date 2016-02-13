@@ -44,7 +44,7 @@
     function foo(){ console.log("Callback"); }
 
     </script>
-    
+
     <SCRIPT TYPE="text/javascript">
     function numbersonly(myfield, e, dec)
     {
@@ -304,23 +304,21 @@ switch(direction) {
   <header>
     <div id="brnad">Ayo Berbudaya</div><span class="responsive">Abud</span>
   <span class="custom-dropdown-bahasa big" align="right" style="float:right;">
-    <select>    
+    <select onchange="location = this.options[this.selectedIndex].value;">    
         <option>Pilih Bahasa</option>
     <?php foreach($tampil_bahasa_where as $data):
 
                      echo"
-                      <option value=''>
-                      <a href='".base_url()."user/bahasa/simpan_session_bahasa_provinsi/?bahasa=English&link=".$this->link."&provinsi=".$provinsi."'>
-                          English
-                       </a>
+                      <option value='".base_url()."user/bahasa/simpan_session_bahasa_provinsi/?bahasa=English&link=".$this->link."&provinsi=".$provinsi."'>
+                          English 
                        </option>
 
-                       <option value=''>
-                          <a href='".base_url()."user/bahasa/simpan_session_bahasa_provinsi/?bahasa=Indonesia&link=".$this->link."&provinsi=".$provinsi."'>Indonesia</a>
+                       <option value='".base_url()."user/bahasa/simpan_session_bahasa_provinsi/?bahasa=Indonesia&link=".$this->link."&provinsi=".$provinsi."'>
+                          Indonesia
                        </option>
 
-                       <option value=''>
-                         <a href='".base_url()."user/bahasa/simpan_session_bahasa_provinsi/?bahasa=".$data->language."&link=".$this->link."&provinsi=".$provinsi."'>".$data->language."</a>
+                       <option value='".base_url()."user/bahasa/simpan_session_bahasa_provinsi/?bahasa=".$data->language."&link=".$this->link."&provinsi=".$provinsi."'>
+                       ".$data->language."
                        </option>
                      ";
                   ?>

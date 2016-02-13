@@ -113,6 +113,28 @@ switch(direction) {
   <label for="menuToggle" class="menu-icon"><div class="box-shadow-menu"></div></label>
   <header>
     <div id="brnad">Ayo Berbudaya</div><span class="responsive">Abud</span>
+     <span class="custom-dropdown-bahasa big" align="right" style="float:right;">
+    <select onchange="location = this.options[this.selectedIndex].value;">    
+        <option>Pilih Bahasa</option>
+    <?php foreach($tampil_bahasa_where as $data):
+
+                     echo"
+                      <option value='".base_url()."user/bahasa/simpan_session_bahasa_provinsi/?bahasa=English&link=".$this->link."&provinsi=".$provinsi."'>
+                          English 
+                       </option>
+
+                       <option value='".base_url()."user/bahasa/simpan_session_bahasa_provinsi/?bahasa=Indonesia&link=".$this->link."&provinsi=".$provinsi."'>
+                          Indonesia
+                       </option>
+
+                       <option value='".base_url()."user/bahasa/simpan_session_bahasa_provinsi/?bahasa=".$data->language."&link=".$this->link."&provinsi=".$provinsi."'>
+                       ".$data->language."
+                       </option>
+                     ";
+                  ?>
+                  <?php endforeach;?>
+    </select>
+</span>
 <?php
   $session = $this->session->userdata('isLoginUser');
   if($session == TRUE)
@@ -178,6 +200,7 @@ switch(direction) {
   </nav>
 </div>
 
+<?php include('include/header_provinsi.php');?>
 <div class="parallax jw1 hero" data-parallax-speed="1">
   <div class="hero-content">
     <h1 style="margin-top:100px;">Jawa Barat,Indonesia</h1>
@@ -194,31 +217,30 @@ switch(direction) {
 <div class="spacer">
   <div class="container-jawabarat">
       <center>
-    <p class="jawabarat-index">Tentang Jawa Barat</p>
+    <p class="jawabarat-index"><?php echo $this->sunda_tentang;?></p>
     <div class="line-jawabarat"></div>
 <div class="container-jawabarat-index">
 
 <div class="gallery-item">
 <h1><i class="fa fa-leaf"></i></h1>
-<p>Memiliki Taman Nasional,Suaka Margasatwa dan Cagar Alam.</p>
+<p><?php echo $this->sunda_text1;?></p>
 </div>
 
 <div class="gallery-item">
 <h1><i class="fa fa-line-chart"></i></h1>
-<p>Budaya di Provinsi Jawa Barat banyak dipengaruhi oleh Budaya Sunda.</p>
+<p><?php echo $this->sunda_text2;?></p>
 </div>
 
 <div class="gallery-item">
 <h1><i class="fa fa-users"></i></h1>
-<p>Jawa Barat melahirkan seni dan Budaya yang beraneka ragam, budaya tersebut adalah budaya asli orang jawa barat.</p>
+<p><?php echo $this->sunda_text3;?></p>
 </div>
 
 <div class="gallery-item">
 <h1><i class="fa fa-map-marker"></i></h1>
-<p>Pengembangan Budaya Lokal dan Menjadi Destinasi Wisata DUNIA.</p>
+<p><?php echo $this->sunda_text4;?></p>
 </div>
-    <p class="jawabarat-index-content">Jawa Barat adalah provinsi dengan penduduk terbanyak, yakni 45.340.800 Jiwa
-serta memiliki potensi pariwisata dan budaya yang sangat kaya.</p>
+    <p class="jawabarat-index-content"><?php echo $this->sunda_text5;?></p>
 </center>
   </div>
 </div>
@@ -242,7 +264,7 @@ serta memiliki potensi pariwisata dan budaya yang sangat kaya.</p>
 <div class="spacer tallSpacer">
   <div class="container">
   <center>
-    <p class="jawabarat-index">Galeri Jawa Barat</p>
+    <p class="jawabarat-index"><?php echo $this->sunda_text7;?></p>
     <div class="line-jawabarat"></div>
 <div class="gallery">
       <ul>
@@ -292,7 +314,7 @@ serta memiliki potensi pariwisata dan budaya yang sangat kaya.</p>
 
 <div class="parallax jw3" data-parallax-speed="1">
   <div class="parallax-content">
-    <h1>Jawa Barat Maju dan Sejahtera Untuk Semua</h1>
+    <h1><?php echo $this->sunda_text8;?></h1>
   </div>
 </div>
 
@@ -309,7 +331,7 @@ serta memiliki potensi pariwisata dan budaya yang sangat kaya.</p>
 <div class="spacer">
   <div class="container">
   <center>
-        <p class="jawabarat-index">Artikel Khusus Provinsi Jawa Barat</p>
+        <p class="jawabarat-index"><?php echo $this->sunda_text9;?></p>
     <div class="line-jawabarat"></div>
   </center>
     <div class="snipresponsive wow fadeInDown">

@@ -28,6 +28,19 @@ class M_map extends CI_Model
         $result = $query->result();
         return $result;   
     }
+
+    function cari_id($provinsi)
+    {
+        $this->db->select('tb_provinsi.id as id');
+        $this->db->from('tb_provinsi');
+        $this->db->order_by('provinsi');
+        $this->db->join('tb_language', 'tb_language.id = tb_provinsi.id_language'); 
+        $this->db->where('tb_provinsi.provinsi',$provinsi);
+        $query = $this->db->get();
+        $result = $query->result();
+        return $result;   
+    }
+
     function bahasa($id_bahasa)
     {
         $this->db->select('*');

@@ -73,10 +73,35 @@ class C_map extends CI_Controller
             $this->jawa_selamat_datang = $this->lang->line('jawa_selamat_datang');
             $this->jawa_text1 = $this->lang->line('jawa_text1');
 
+            // index per provinsi
+            //jawa barat sunda
+            $this->sunda_tentang = $this->lang->line('sunda_tentang');
+            $this->sunda_text1 = $this->lang->line('sunda_text1');
+            $this->sunda_text2 = $this->lang->line('sunda_text2');
+            $this->sunda_text3 = $this->lang->line('sunda_text3');
+            $this->sunda_text4 = $this->lang->line('sunda_text4');
+            $this->sunda_text5 = $this->lang->line('sunda_text5');
+            $this->sunda_text6 = $this->lang->line('sunda_text6');
+            $this->sunda_text7 = $this->lang->line('sunda_text7');
+            $this->sunda_text8 = $this->lang->line('sunda_text8');
+            $this->sunda_text9 = $this->lang->line('sunda_text9');
 
-            
+
+
+            //index per Provinsi
+            //jawa jawa tengah
+            $this->jateng_text1 = $this->lang->line('jateng_1');
+            $this->jateng_text2 = $this->lang->line('jateng_2');
+            $this->jateng_text3 = $this->lang->line('jateng_3');
+            $this->jateng_text4 = $this->lang->line('jateng_4');
+            $this->jateng_text5 = $this->lang->line('jateng_5');
+            $this->jateng_text6 = $this->lang->line('jateng_6');
+            $this->jateng_text7 = $this->lang->line('jateng_7');
+            $this->jateng_text8 = $this->lang->line('jateng_8');
+            $this->jateng_text9 = $this->lang->line('jateng_9');
+                      
         $this->tampil_kategori = $this->mod_index->tampil_kategori_forum();
-        // var_dump($this->tampil_bahasa_where);
+        // var_dump($this->sunda_text9);
         // exit();
     }
     function index()

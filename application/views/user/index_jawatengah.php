@@ -1,9 +1,9 @@
 <?php include('include/header_provinsi.php');?>
 <div id="title-header-jawa-tengah" class="slide header-slide">
 <br>
-  <span class="header_font">Jawa Tengah</span>
+  <span class="header_font"><?php echo $this->jateng_text1;?></span>
   <br><br>
-<p class="jawabarat-index-content">jawa tengah adalah propinsi dimana budaya jawa banyak berkembag disini karena di Jawa Tengah dahulu banyak kerajaan berdiri disini itu terlihat dari berbagai peninggalan candi di jawa tengah.</p>
+<p class="jawabarat-index-content"><?php echo $this->jateng_text2;?></p>
 </div>
 <center>
     <div class="services">
@@ -13,8 +13,8 @@
             <div class="col-md-4 col-lg-4">
               &nbsp;<img src="<?php echo base_url();?>assets_users/img/tribe.png">
               <br><br>
-              <h4>Suku</h4>
-              <p>Mayoritas penduduk Jawa Tengah adalah Suku Jawa.Jawa Tengah dikenal sebagai pusat budaya Jawa.</p>
+              <h4><?php echo $this->jateng_text3;?></h4>
+              <p><?php echo $this->jateng_text6;?></p>
                 
             </div>
           </div><!-- -->
@@ -24,8 +24,8 @@
             <div class="col-md-4 col-lg-4">
               &nbsp;<img src="<?php echo base_url();?>assets_users/img/culture.png">
               <br><br>
-              <h4>Kebudayaan</h4>
-              <p>Jawa tengah mempunyai seni dan kebudayaan yang unik. Wayang dan batik adalah kesenian dari Jawa Tengah yang saat ini sudah banyak di kenal di berbagai manca negara bahkan dunia.</p>
+              <h4><?php echo $this->jateng_text4;?></h4>
+              <p><?php echo $this->jateng_text7;?></p>
             </div>
           </div>
           <!--  -->
@@ -35,8 +35,8 @@
             <div class="col-md-4 col-lg-4">
               &nbsp;<img src="<?php echo base_url();?>assets_users/img/star-512.png">
               <br><br>
-              <h4>Keistimewaan</h4>
-              <p>Jawa Tengah dikenal sebagai "jantung" budaya Jawa.</p>
+              <h4><?php echo $this->jateng_text5;?></h4>
+              <p><?php echo $this->jateng_text8;?>.</p>
             </div>
           </div>
           <!-- -->
@@ -138,7 +138,7 @@
 
     <div class="call-to-action text-center">
     <center>
-          <h2>Jawa Tengah adalah propinsi dimana budaya jawa banyak berkembang disini karena di jawa tengah dahulu banyak kerajaan berdiri disini itu terlihat dari berbagai peninggalan candi di jawa tengah.</h2>
+          <h2><?php echo $this->jateng_text9;?></h2>
     </center>
     </div>
     <!-- end call-to-action-->

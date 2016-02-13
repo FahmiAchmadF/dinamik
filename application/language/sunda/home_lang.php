@@ -58,4 +58,22 @@
 	
 	//berita
 	$lang['text_berita_judul'] = 'Wartos';
+
+	// index per provinsi
+	//jawa barat sunda
+	$lang['sunda_tentang'] = 'Ngeunaan Jawa Barat';
+	$lang['sunda_text1'] = 'Ngabogaan Taman Nasional , Suaka Margasatwa sarta Cagar Alam';
+	$lang['sunda_text2'] = 'Budaya di Propinsi Jawa Barat seueur dipangaruhan ku Budaya Sunda';
+	$lang['sunda_text3'] = 'Jawa barat ngababarkeun seni sarta Budaya anu beraneka wanda,budaya kasebat nyaeta budaya awit jalmi jawa barat';
+	$lang['sunda_text4'] = 'Pengembangan Budaya Lokal sarta Barobah kaayaan Destinasi Wisata Dunya';
+
+	$lang['sunda_text5'] = 'Jawa Barat nyaeta propinsi kalawan nu nyicingan terbanyak,nyaeta 45.340.800 Jiwa sarta ngabogaan potensi pariwisata sarta budaya anu jegud pisan';
+
+	$lang['sunda_text6'] = '';
+	$lang['sunda_text7'] = 'Galeri Jawa Barat';
+	$lang['sunda_text8'] = 'Jawa Barat Maju sarta Sejahtera Kanggo Sadaya';
+	$lang['sunda_text9'] = 'Artikel Propinsi Jawa Barat';
+	
+
+
 ?>
