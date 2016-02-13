@@ -50,88 +50,22 @@
       <!-- end heading -->
       
       <div class="gallery clearfix">
-        <div class="gallery-inner">
-          <img src="<?php echo base_url();?>assets_users/img/tari-barong-jawa-tengah.jpg" alt="thumbnail" class="img-responsive" />
-          <div class="caption">
-            <div class="caption-heading visible-lg">
-              <h4>Tari Barong</h4>
-              
-            </div>
-            
-          </div><!-- end caption -->
-        </div><!-- end gallery-inner -->
-        <div class="gallery-inner">
-          <img src="<?php echo base_url();?>assets_users/img/tari-barong-jawa-tengah.jpg" alt="thumbnail" class="img-responsive" />
-          <div class="caption">
-            <div class="caption-heading visible-lg">
-              <h4>Tari Barong</h4>
-              
-            </div>
-            
-          </div><!-- end caption -->
-        </div><!-- end gallery-inner -->
-        <div class="gallery-inner">
-          <img src="<?php echo base_url();?>assets_users/img/tari-barong-jawa-tengah.jpg" alt="thumbnail" class="img-responsive" />
-          <div class="caption">
-            <div class="caption-heading visible-lg">
-              <h4>Tari Barong</h4>
-              
-            </div>
-            
-          </div><!-- end caption -->
-        </div><!-- end gallery-inner -->
-        <div class="gallery-inner">
-          <img src="<?php echo base_url();?>assets_users/img/tari-barong-jawa-tengah.jpg" alt="thumbnail" class="img-responsive" />
-          <div class="caption">
-            <div class="caption-heading visible-lg">
-              <h4>Tari Barong</h4>
-              
-            </div>
-            
-          </div><!-- end caption -->
-        </div><!-- end gallery-inner -->
+        <?php foreach ($data_gallery as $data) { ?>
+          
         
         <div class="gallery-inner">
-          <img src="<?php echo base_url();?>assets_users/img/tari-barong-jawa-tengah.jpg" alt="thumbnail" class="img-responsive" />
+          <img src="<?php echo base_url();?>images/gallery/<?php echo $data->image; ?>" alt="thumbnail" class="img-responsive" />
           <div class="caption">
             <div class="caption-heading visible-lg">
-              <h4>Tari Barong</h4>
+              <h4><?php echo $data->caption; ?></h4>
               
             </div>
             
           </div><!-- end caption -->
         </div><!-- end gallery-inner -->
+
+        <?php } ?>
         
-        <div class="gallery-inner">
-          <img src="<?php echo base_url();?>assets_users/img/tari-barong-jawa-tengah.jpg" alt="thumbnail" class="img-responsive" />
-          <div class="caption">
-            <div class="caption-heading visible-lg">
-              <h4>Tari Barong</h4>
-            </div>
-          </div><!-- end caption -->
-        </div><!-- end gallery-inner -->
-        
-        <div class="gallery-inner">
-          <img src="<?php echo base_url();?>assets_users/img/tari-barong-jawa-tengah.jpg" alt="thumbnail" class="img-responsive" />
-          <div class="caption">
-            <div class="caption-heading visible-lg">
-              <h4>Tari Barong</h4>
-              
-            </div>
-            
-          </div><!-- end caption -->
-        </div><!-- end gallery-inner -->
-        
-        <div class="gallery-inner">
-          <img src="<?php echo base_url();?>assets_users/img/tari-barong-jawa-tengah.jpg" alt="thumbnail" class="img-responsive" />
-          <div class="caption">
-            <div class="caption-heading visible-lg">
-              <h4>Tari Barong</h4>
-              
-            </div>
-            
-          </div><!-- end caption -->
-        </div><!-- end gallery-inner -->
       </div><!-- end gallery -->
     </div>
     <!-- end latest-work -->
@@ -150,55 +84,17 @@
 
 
     <div class="snipresponsive wow fadeInDown" style="margin-top:50px">
-<figure class="snip1158 red wow bounceInLeft">
-  <img src="<?php echo base_url();?>assets_users/img/tari-barong-jawa-tengah.jpg" alt="sample21"/>
-  <figcaption>
-    <h2>Tari Barong</h2>
-    <span>Tarian</span>
-  </figcaption>
-  <a href="#"></a>
-</figure>
-<figure class="snip1158 yellow wow fadeInDown">
-  <img src="<?php echo base_url();?>assets_users/img/tari-barong-jawa-tengah.jpg" alt="sample68"/>
-  <figcaption>
-    <h2>Tari Barong</h2>
-    <span>Tarian</span>
-  </figcaption>
-  <a href="#"></a>
-</figure>
-<figure class="snip1158 blue wow bounceInRight">
-  <img src="<?php echo base_url();?>assets_users/img/tari-barong-jawa-tengah.jpg" alt="sample17"/>
-  <figcaption>
-    <h2>Tari Barong</h2>
-    <span>Tarian</span>
-  </figcaption>
-  <a href="#"></a>
-</figure>
-<br>
-<figure class="snip1158 red wow bounceInLeft">
-  <img src="<?php echo base_url();?>assets_users/img/tari-barong-jawa-tengah.jpg" alt="sample21"/>
-  <figcaption>
-    <h2>Tari Barong</h2>
-    <span>Tarian</span>
-  </figcaption>
-  <a href="#"></a>
-</figure>
-<figure class="snip1158 yellow wow fadeInDown">
-  <img src="<?php echo base_url();?>assets_users/img/tari-barong-jawa-tengah.jpg" alt="sample68"/>
-  <figcaption>
-    <h2>Tari Barong</h2>
-    <span>Tarian</span>
-  </figcaption>
-  <a href="#"></a>
-</figure>
-<figure class="snip1158 blue wow bounceInRight" style="margin-bottom:70px;">
-  <img src="<?php echo base_url();?>assets_users/img/tari-barong-jawa-tengah.jpg" alt="sample17"/>
-  <figcaption>
-    <h2>Tari Barong</h2>
-    <span>Tarian</span>
-  </figcaption>
-  <a href="#"></a>
-</figure>
+<?php foreach ($data_artikel as $data) { ?>
+    <figure class="snip1158 red wow bounceInLeft">
+      <img src="<?php echo base_url();?>images/<?php echo $data->cover;?>" alt="sample"/>
+      <figcaption>
+        <h2><?php echo $data->judul; ?></h2>
+        <span><?php echo $data->isi; ?></span>
+      </figcaption>
+      <a href="<?php echo base_url();?>user/c_artikel/lihat_artikel/<?php echo $data->id_artikel;?>"></a>
+    </figure>  
+<?php } ?>    
+
 </center>
 </div>
 </center>

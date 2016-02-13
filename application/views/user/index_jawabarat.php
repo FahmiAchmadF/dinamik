@@ -268,39 +268,14 @@ switch(direction) {
     <div class="line-jawabarat"></div>
 <div class="gallery">
       <ul>
+      <?php foreach ($data_gallery as $data) { ?>
         <li>
-                <img src="<?php echo base_url();?>assets_users/img/jaipongan.jpg" alt="" />
-                <div class="info"><h1 class="title">Jaipongan</h1></div>
+                <img src="<?php echo base_url();?>images/gallery/<?php echo $data->image; ?>" alt="" />
+                <div class="info"><h1 class="title"><?php echo $data->caption; ?></h1></div>
         </li>
-        <li>
-                <img src="<?php echo base_url();?>assets_users/img/jaipongan.jpg" alt="" />
-                <div class="info"><h1 class="title">Jaipongan</h1></div>
-        </li>
-        <li>
-                <img src="<?php echo base_url();?>assets_users/img/jaipongan.jpg" alt="" />
-                <div class="info"><h1 class="title">Jaipongan</h1></div>
-        </li>
-        <li>
-
-                 <img src="<?php echo base_url();?>assets_users/img/jaipongan.jpg" alt="" />
-                 <div class="info"><h1 class="title">Jaipongan</h1></div>
-        </li>
-        <li>
-                <img src="<?php echo base_url();?>assets_users/img/jaipongan.jpg" alt="" />
-                <div class="info"><h1 class="title">Jaipongan</h1></div>
-        </li>
-        <li>
-                 <img src="<?php echo base_url();?>assets_users/img/jaipongan.jpg" alt="" />
-                 <div class="info"><h1 class="title">Jaipongan</h1></div>
-        </li>
-        <li>
-                 <img src="<?php echo base_url();?>assets_users/img/jaipongan.jpg" alt="" />
-                 <div class="info"><h1 class="title">Jaipongan</h1></div>
-        </li>
-        <li>
-                 <img src="<?php echo base_url();?>assets_users/img/jaipongan.jpg" alt="" />
-                 <div class="info"><h1 class="title">Jaipongan</h1></div>
-        </li>
+      <?php } ?>
+        
+        
       </ul>
     </div><!-- .gallery -->
 <br><br><br><br><br><br>

@@ -148,10 +148,13 @@ class C_map extends CI_Controller
             $data_artikel = $this->mod_index->data_artikel($this->bhs);
             $data_berita = $this->mod_index->data_berita($this->bhs);
             $data_topik = $this->mod_index->data_topik();
+            $data_gallery = $this->mod_index->data_gallery($id_provinsi);
+
             $data = array(
             'user'=>$this->seson,
             'data_artikel'  =>$data_artikel,
             'data_berita'  =>$data_berita,
+            'data_gallery' =>$data_gallery,
             'data_topik'  =>$data_topik,
             'tampil_kategori_forum'=>$this->tampil_kategori,
             'tampil_bahasa_where'=>$this->tampil_bahasa_where,
@@ -164,11 +167,14 @@ class C_map extends CI_Controller
             $data_artikel = $this->mod_index->data_artikel($this->bhs);
             $data_berita = $this->mod_index->data_berita($this->bhs);
             $data_topik = $this->mod_index->data_topik();
+            $data_gallery = $this->mod_index->data_gallery($id_provinsi);
+
             $data = array(
             'user'=>$this->seson,
             'data_artikel'  =>$data_artikel,
             'data_berita'  =>$data_berita,
             'data_topik'  =>$data_topik,
+            'data_gallery' =>$data_gallery,
             'tampil_kategori_forum'=>$this->tampil_kategori,
             'tampil_bahasa_where'=>$this->tampil_bahasa_where,
             'provinsi'  =>$provinsi,
@@ -180,10 +186,13 @@ class C_map extends CI_Controller
             $data_artikel = $this->mod_index->data_artikel($this->bhs);
             $data_berita = $this->mod_index->data_berita($this->bhs);
             $data_topik = $this->mod_index->data_topik();
+            $data_gallery = $this->mod_index->data_gallery($id_provinsi);
+
             $data = array(
             'user'=>$this->seson,
             'data_artikel'  =>$data_artikel,
             'data_berita'  =>$data_berita,
+            'data_gallery' =>$data_gallery,
             'data_topik'  =>$data_topik,
             'tampil_kategori_forum'=>$this->tampil_kategori,
             'tampil_bahasa_where'=>$this->tampil_bahasa_where,

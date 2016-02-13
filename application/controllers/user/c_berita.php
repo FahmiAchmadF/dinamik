@@ -10,7 +10,7 @@ class C_berita extends CI_Controller
         $this->load->model('user/m_berita');
         $this->load->model('user/m_forum');
         $this->load->model('mod_autonumber');
-        $this->link = '/kebudayaan/user';
+        $this->link = 'c_berita';
         $session = $this->session->userdata('bahasa');
         $bahasa = $this->session->userdata('language');
         // var_dump($bahasa);

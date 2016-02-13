@@ -264,7 +264,7 @@ return false;
                <ul>
                   <?php foreach($tampil_bahasa as $data):
                      echo"<li>
-                     <a href='".base_url()."user/bahasa/simpan_session/?bahasa=".$data->language."&link=".$this->link."'>".$data->language."</a>
+                     <a href='".base_url()."user/bahasa/simpan_session/?bahasa=".$data->language."&link=".$link."'>".$data->language."</a>
                      </li>";
                   ?>
                   <?php endforeach;?>

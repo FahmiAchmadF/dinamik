@@ -129,9 +129,14 @@ class C_artikel extends CI_Controller
         $id_kategori = $this->uri->segment(4);
         $this->link ='c_artikel/tampil_artikel/'.$id_kategori.'';
         $artikel_kategori = $this->m_artikel->data_artikel_kategori($id_kategori,$this->bhs);
-        foreach ($artikel_kategori as $data) {
-            $kategori= $data->kategori;
+        if (empty($artikel_kategori)) {
+            $kategori ='';
+        } else {
+            foreach ($artikel_kategori as $data) {
+                $kategori= $data->kategori;
+            }    
         }
+        
         // var_dump($artikel_kategori);
         // exit();
         $data_artikel = $this->mod_index->data_artikel($this->bhs);

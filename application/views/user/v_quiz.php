@@ -68,21 +68,13 @@
       <br>
             <hr class="style2-quiz">
           <br>
-         <div class="tile" style="background-image: url('img/jaipongan.jpg');">
-    <div class="image-title">
-      <h1>Tarian Jaipong dan Teknik </h1>
-    </div>
-   </div>
-   <div class="tile" style="background-image: url('img/jaipongan.jpg');">
-    <div class="image-title">
-      <h1>Tarian Jaipong dan Teknik</h1>
-    </div>
-   </div>
-   <div class="tile" style="background-image: url('img/jaipongan.jpg');">
-    <div class="image-title">
-      <h1>Tarian Jaipong dan Teknik</h1>
-    </div>
-   </div>
+    <?php foreach ($quizpopuler as $data) { ?>
+      <div class="tile" style="background-image: url('img/jaipongan.jpg');">
+      <div class="image-title"> 
+        <h1><a href="<?php echo base_url(); ?>user/c_quiz/jawab/<?php echo $data->id_quiz; ?>"> <?php echo $data->judul_quiz; ?></h1>
+      </div>
+     </div>  
+    <?php } ?>
       </div>
     </div>
     <br>

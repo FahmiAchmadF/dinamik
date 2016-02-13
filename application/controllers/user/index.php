@@ -97,13 +97,14 @@ class Index extends CI_Controller
         $data_topik = $this->mod_index->data_topik();
         // var_dump($data_berita);
         // exit();
-        $data = array(
+        $data = array(  
         'user'=>$this->seson,
         'data_artikel'  =>$data_artikel,
         'data_berita'  =>$data_berita,
         'data_topik'  =>$data_topik, 
         'tampil_kategori_forum'=>$this->tampil_kategori,
         'tampil_bahasa'=>$this->tampil_bahasa,
+        'link'  => $this->link,
         );
 		$this->load->view('user/index', $data);
 	}
@@ -115,6 +116,7 @@ class Index extends CI_Controller
         $data = array(
         'member'  =>$data_user,
         'user'=>$this->seson,
+        'link'=>$this->link,
         'tampil_kategori_forum'=>$this->tampil_kategori,
         'tampil_bahasa'=>$this->tampil_bahasa,
         );

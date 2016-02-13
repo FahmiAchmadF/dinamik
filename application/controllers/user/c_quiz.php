@@ -107,7 +107,7 @@ class C_quiz extends CI_Controller
     {
         $idquiz = $this->uri->segment(4);
 
-        $this->link ='c_quiz';
+        $this->link ='c_quiz/jawab';
         $idquiz = 1;
         $data_artikel = $this->mod_index->data_artikel($this->bhs);
         $data_berita = $this->mod_index->data_berita($this->bhs);
@@ -121,6 +121,8 @@ class C_quiz extends CI_Controller
         'data_artikel'  =>$data_artikel,
         'data_berita'  =>$data_berita,
         'data_topik'  =>$data_topik,
+        'link' =>$this->link,
+        'quizpopuler' => $this->m_quiz->quizpopuler(),
         'tampil_kategori_forum'=>$this->tampil_kategori,
         'tampil_bahasa'=>$this->tampil_bahasa,
         'soalsoal' => $this->m_quiz->inibarusoal($getidsoal, $langlang),
@@ -131,9 +133,10 @@ class C_quiz extends CI_Controller
 
     public function index() {
                 
-        
+        $this->link = 'c_quiz';
         $dari = $this->uri->segment(4);
         $data = array(
+            'link' =>$this->link, 
             'kategori' => $this->m_quiz->lihatdaftarquiz(),
             'user' => $this->seson
             );

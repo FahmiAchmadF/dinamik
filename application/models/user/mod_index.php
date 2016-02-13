@@ -84,4 +84,12 @@ class Mod_index extends CI_Model
         $this->db->where('username', $username);
         $this->db->update('tb_user', $data);
     }
+    function data_gallery($id_provinsi) {
+        $q = $this->db->select('*')
+                      ->where('id_provinsi', $id_provinsi)
+                      ->from('tb_gallery')
+                      ->get()
+                      ->result();
+        return $q;
+    }
 }

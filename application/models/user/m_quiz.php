@@ -92,6 +92,18 @@ public function ambilsoaldariquiz($idquiz) {
 			return $this->db->get($namatabel)->num_rows();
 		}
 
+		function quizpopuler() {
+			$q = $this->db->select('*, COUNT(tb_disable.id_quiz) as populer')
+						  ->from('tb_disable')
+						  ->join('tb_quiz', 'tb_disable.id_quiz = tb_quiz.id')
+						  ->join('tb_quiz_language', 'tb_quiz.id = tb_quiz_language.id_quiz')
+						  ->group_by('tb_disable.id_quiz')
+						  ->order_by('populer', 'desc')
+						  ->get()
+						  ->result();
+			return $q;
+		}
+
 
 		
 

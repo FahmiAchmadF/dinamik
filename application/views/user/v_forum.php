@@ -130,7 +130,6 @@
             <hr class="style2">
           <br>
         <?php foreach ($data_berita as $data):?>
-          <div class="circle">12</div>
           <p class="content-sidebar-content-2"><?php echo $data->judul;?></p>
             <hr class="style1">
        <?php endforeach;?>
